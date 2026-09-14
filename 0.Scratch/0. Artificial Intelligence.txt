@@ -1,3 +1,59 @@
+========================================
+Lecture 0 — Artificial Intelligence
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Artificial Intelligence is going to change programming. 
+In fact, it’s already changing the way we write code, 
+and that impact is only going to grow in the future.
+
+This is actually a good thing. With AI, you can ask 
+the computer to help you solve a problem or find a 
+bug in your code. Even better, you can now tell the 
+AI what new features you want to add to your software.
+
+# HOW AI CAN HELP PROGRAMMERS
+
+AI can help programmers with many parts of software development, such as:
+
+- Explaining unfamiliar code or concepts;
+- Finding bugs and identifying possible mistakes;
+- Suggesting solutions to programming problems;
+- Generating small pieces of code;
+- Helping refactor or improve existing code;
+- Writing tests, documentation, or repetitive code;
+- Helping developers turn requirements into working implementations;
+
+In the past, programmers had to turn almost every idea into code by themselves. 
+Today, AI tools can help with some of this work. This allows developers to focus 
+more on understanding the problem, deciding what the software should do, and checking 
+possible solutions.
+
+# HUMAN CAPACITY AS A BOTTLENECK
+
+The reality is that you and I as humans have long been the bottleneck. 
+
+There are only so many hours in a day and only so many developers available on a team.
+At the same time, software projects usually have a lot of work to do:
+
+- more bugs to fix;
+- more features to build;
+- more tests to write;
+- more code to review;
+- more documentation to maintain;
+- more problems to investigate.
+
+Because of this, the time and capacity of developers can slow down software development.
+
+AI can help by doing some tasks faster and reducing the amount of work developers
+need to do. It can help with repetitive tasks, find solutions more quickly, and help 
+one developer do more work.
+
+However, AI should not be trusted to build correct software by itself. AI-generated 
+code can have bugs, security problems, wrong ideas, or slow and inefficient solutions. 
+Programmers still need enough knowledge to understand and check the code created by AI.
+
 # WHY PROGRAMMING FUNDAMENTALS STILL MATTER
 
 Even though AI is becoming more important, basic programming knowledge is still very 
