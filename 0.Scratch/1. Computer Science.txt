@@ -1,0 +1,66 @@
+========================================
+Lecture 1 — Computer Science
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Computer science is the study of information and how we can work with it.
+
+- How can information be represented?;
+- How can information be stored?;
+- How can information be processed?;
+- How can information be used to solve problems?;
+
+Computer science is not only about computers or programming. Computers and
+programming languages are tools that help us apply ideas from computer science
+to real-world problems.
+
+# COMPUTATIONAL THINKING
+
+An important idea in computer science is computational thinking. Computational 
+thinking means applying ideas and methods from computer science to problems in 
+the real world.
+
+It involves thinking carefully about a problem, understanding what information
+is available, deciding what steps are needed, and finding an efficient way to
+reach a solution.
+
+This way of thinking can be useful even when the problem does not directly
+involve a computer.
+
+# COMPUTER SCIENCE AS PROBLEM SOLVING
+
+Programming is an important part of computer science, but learning how to write
+code is not the final goal. Programming languages, computers, algorithms, and
+other technologies are tools and methods that programmers can use to solve
+problems. A problem can be represented using a simple model:
+
+Input -> [ Process ] -> Output
+
+- The input represents the information or problem that we start with.
+- The output represents the result or solution that we want to produce.
+- The process that transforms one into the other.
+
+# THE PROCESS
+
+The process box represents the steps needed to transform an input into the
+desired output. 
+
+Input -> [ Process ] -> Output
+
+Inside this process box are the instructions, algorithms, calculations, and
+decisions that solve the problem.
+
+For example:
+
+- The input could be a list of numbers;
+- The process box could contain instructions for sorting those numbers;
+- The output could be the same numbers arranged from smallest to largest;
+
+Computer science helps us understand how to design what happens inside this
+process box. The goal is to create a clear and correct process that takes some 
+input and produces the expected output.
+
+In this sense, computer science is fundamentally the study of problem solving:
+understanding a problem, representing its information, designing a process,
+and producing the desired result.
