@@ -1,0 +1,86 @@
+========================================
+Lecture 4 — ASCII
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+So far, we have seen how computers can use binary to represent numbers.
+But computers also need to represent other kinds of information, such as:
+
+* letters;
+* numbers written as characters;
+* punctuation;
+* symbols;
+* spaces and other special characters.
+
+Since computers ultimately work with bits, we need a way to represent these
+characters using numbers. One early solution to this problem is ASCII.
+
+# WHAT IS ASCII?
+
+ASCII stands for: American Standard Code for Information Interchange
+
+ASCII is a character encoding system. A character encoding defines 
+a relationship between characters and numbers. For example, ASCII 
+assigns numbers to letters such as:
+
+A -> 65
+B -> 66
+C -> 67
+
+Lowercase letters have their own values:
+
+a -> 97
+b -> 98
+c -> 99
+
+Other characters also have numerical values.
+
+For example:
+
+0 -> 48
+1 -> 49
+2 -> 50
+
+Space -> 32
+!     -> 33
+?     -> 63
+
+The important idea is that the computer is not directly storing the letter
+"A". It stores a number that represents the letter. That number can then be 
+represented using binary.
+
+# FROM CHARACTERS TO BINARY
+
+Consider the uppercase letter: A
+In ASCII: A -> 65
+The decimal number in binary: 65 -> 1000001
+
+So we can think of the process as: Character -> Number -> Binary
+
+The computer stores the binary pattern. Software interprets that pattern
+according to the ASCII standard and understands that it represents the
+character "A".
+
+This shows an important idea in computer science: Bits do not have meaning by themselves.
+
+Their meaning depends on how we choose to interpret them. The same pattern of bits could 
+represent a number, a letter, part of an image, or something else depending on the context.
+
+# LIMITATIONS OF ASCII
+
+ASCII was very useful, but 128 possible values are not enough to represent all
+of the world's writing systems and symbols.
+
+ASCII works well for basic English text, but it cannot directly represent many
+characters such as:
+
+- Chinese characters;
+- Arabic characters;
+- emojis;
+- many other symbols and alphabets.
+
+Because computers are used around the world, we need a much larger system for
+representing text.
+
+This leads to more modern character encoding systems such as Unicode.
