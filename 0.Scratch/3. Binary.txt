@@ -1,0 +1,135 @@
+========================================
+Lecture 3 — Binary Notation
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Instead of using each position to represent only one additional value, we can
+use a number system where each position has a different meaning. 
+
+This allows us to represent much larger numbers using fewer symbols. 
+One such system is binary. Binary uses only two digits: 0 and 1.
+
+By combining these two digits in different positions, computers can represent
+many different numbers and, eventually, many different kinds of information.
+
+# FROM COUNTING TO PATTERNS
+
+In unary notation, the important question is: How many fingers are there?
+
+Binary gives us another possibility. Instead of caring only about the total 
+number of raised fingers, we can give each finger its own position and allow 
+each position to have one of two states.
+
+Now imagine that we use three fingers. Each finger can independently be either 0 or 1.
+
+That gives us: 2 * 2 * 2 = 8 possible patterns
+
+or, more compactly: 2^3 = 8 possible patterns
+
+Those patterns are:
+
+- 000 -> 0
+- 001 -> 1
+- 010 -> 2
+- 011 -> 3
+- 100 -> 4
+- 101 -> 5
+- 110 -> 6
+- 111 -> 7
+
+# BITS
+
+A single binary digit is called a bit.
+
+The word "bit" comes from: binary digit.
+
+A bit can have one of two values: 0 and 1.
+
+So:
+
+- 1 bit has 2 possible patterns
+- 2 bits have 4 possible patterns
+- 3 bits have 8 possible patterns
+- 4 bits have 16 possible patterns
+- 5 bits have 32 possible patterns
+
+In general: n bits can represent 2^n different patterns
+
+If we use those patterns to represent non-negative integers, then n bits can
+represent values from: 0 through 2^n - 1
+
+For example:
+
+- 2 bits -> 2^2 = 4 patterns -> values 0 through 3
+- 4 bits -> 2^4 = 16 patterns -> values 0 through 15
+- 8 bits -> 2^8 = 256 patterns -> values 0 through 255
+
+But we still have an important question. Why should a pattern such as 101 mean the number 5?
+To understand that, it helps to look at the number system we already use.
+
+# READING BINARY NUMBERS
+
+In the decimal system, which we use every day, each position represents a power of 10.
+
+For example, in the number: 347
+
+- 3 is in the hundreds place
+- 4 is in the tens place
+- 7 is in the ones place
+
+So we can write: 347 = (3 × 100) + (4 × 10) + (7 × 1)
+
+Binary works in the same general way, but instead of powers of 10, it uses powers of 2.
+
+# BINARY PLACE VALUES
+
+Consider the binary number: 101
+
+Starting from the right, each position represents a power of 2.
+
+Binary digit:    1    0    1
+Place value:     2²   2¹   2⁰
+
+Value:           4    2    1
+
+So the binary number "101" means: (1 × 4) + (0 × 2) + (1 × 1)
+Which gives us: 4 + 0 + 1 = 5
+
+Therefore: "101" in binary represents "5" in decimal.
+
+# Why Computers Use Binary
+
+Computers use binary not because it is easier for humans, 
+but because it works extremely well with electronic hardware.
+
+To understand why this is useful, imagine a simple light bulb. 
+A light bulb can exist in two basic states:
+
+- Off = 0
+- On  = 1
+
+This gives us a simple physical way to represent binary digits. 
+If the light is off, the computer can interpret that state as 0. 
+If the light is on, it can interpret it as 1.
+
+Electronic circuits work in a similar way. Instead of using a light bulb, 
+computers use electrical signals. A low or absent voltage can represent 0, 
+while a higher voltage can represent 1.
+
+# BINARY IS ONLY THE BEGINNING
+
+So far, we have mainly used binary to represent numbers.
+But computers obviously work with much more than numbers.
+
+They work with:
+
+- text,
+- images,
+- audio,
+- video,
+- and much more.
+
+The important idea is that all of those things must eventually be represented
+using bits. Later, we will see how patterns of zeros and ones can be given meaning 
+so that they represent letters, colors, sounds, and other kinds of information.
