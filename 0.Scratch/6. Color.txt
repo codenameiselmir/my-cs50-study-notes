@@ -1,0 +1,151 @@
+========================================
+Lecture 6 — Color
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+A computer does not understand "red" or "blue" in the same way a human does.
+Instead, we agree on a numerical system for representing colors.
+
+One of the most common systems is RGB.
+
+# RGB
+
+RGB stands for: Red, Green and Blue
+
+The idea is that many colors can be created by mixing different amounts of:
+
+- Red;
+- Green;
+- Blue.
+
+For example: (72, 73, 33)
+
+- Red   -> 72
+- Green -> 73
+- Blue  -> 33
+
+When these three amounts are combined, they produce a particular color.
+
+In this case, the result is roughly a dark yellow or olive-like color.
+
+# EACH COLOR USES A NUMBER
+
+A common RGB system gives each color channel 8 bits.
+
+Since 8 bits can represent: 2^8 = 256 possible values
+
+each channel can have a value from: 0 through 255
+
+So:
+
+Red   -> 0 to 255
+Green -> 0 to 255
+Blue  -> 0 to 255
+
+By changing these values, we can create many different colors.
+
+# THE SAME BITS CAN MEAN DIFFERENT THINGS
+
+Consider these three numbers again: (72, 73, 33)
+
+If we interpret them as ASCII values:
+
+72 -> H
+73 -> I
+33 -> !
+
+But if we interpret those same numbers as RGB:
+
+Red   -> 72
+Green -> 73
+Blue  -> 33
+
+they represent a color.
+
+This demonstrates an important idea from previous lectures:
+
+Bits do not have meaning by themselves.
+
+Meaning depends on how the software interprets them.
+
+The same sequence of bits could represent:
+
+* text;
+* a number;
+* a color;
+* part of an image;
+* or something else.
+
+Context determines the meaning.
+
+# PIXELS
+
+Digital images are made from very small individual points called pixels.
+
+Pixel stands for: Picture Element
+
+If we zoom far enough into a digital image, we can often see these individual
+small squares.
+
+Each pixel has its own color.
+
+For example, one pixel might be: (255, 255, 0)
+while another might be: (100, 50, 25)
+
+By placing many differently colored pixels next to each other, a computer can
+create an entire image.
+
+# PIXELS AND MEMORY
+
+Suppose one pixel uses standard RGB.
+
+That pixel requires: 3 bytes
+
+Now imagine an image containing: 1,000,000 pixels
+
+If every pixel requires 3 bytes, 
+then the raw pixel data alone would require: 1,000,000 * 3
+
+which is: 3,000,000 bytes
+or roughly: 3 MB
+
+This helps explain why images can quickly require large amounts of storage.
+
+# IMAGE DIMENSIONS
+
+Digital images have a width and a height.
+
+These dimensions are determined by the number of pixels in the image.
+
+For example, an image might have a resolution of: 1920 x 1080
+
+This means:
+
+- Width  -> 1920 pixels
+- Height -> 1080 pixels
+
+The width tells us how many pixels exist horizontally.
+The height tells us how many pixels exist vertically.
+
+To find the total number of pixels in the image, we multiply:
+
+width * height
+
+So: 1920 * 1080 = 2,073,600 pixels
+
+This means a 1920 x 1080 image contains: 2,073,600 individual pixels
+
+Each of these pixels stores its own color information.
+
+Therefore, increasing the width or height of an image usually means:
+
+* more pixels;
+* more color information;
+* more memory or storage required.
+
+For example: 100 x 100 = 10,000 pixels
+
+while: 1000 x 1000 = 1,000,000 pixels
+
+So image dimensions directly affect how many pixels an image contains.
