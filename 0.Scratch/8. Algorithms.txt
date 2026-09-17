@@ -1,0 +1,354 @@
+========================================
+Lecture 8 — Algorithms
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+So far, we have learned how computers can represent information.
+
+We can represent:
+
+- numbers;
+- text;
+- colors;
+- images;
+- audio;
+- video.
+
+But representation is only one part of computer science. Once we have some input, 
+we still need to answer another important question: How do we solve the problem?
+
+This is where algorithms become important. 
+
+# ALGORITHMS AND CODE
+
+An algorithm is a step-by-step set of instructions for solving a problem.
+
+For example, an algorithm could be written conceptually as:
+
+1. Look at the middle of a list.
+2. Compare the value with the target.
+3. Decide which half could contain the target.
+4. Ignore the other half.
+5. Repeat.
+
+That algorithm might later be implemented in:
+
+- C;
+- C++;
+- Java;
+- Python;
+- JavaScript;
+- or another programming language.
+
+Programming languages are tools we use to express algorithms in a way that
+computers can execute.
+
+# SEARCHING A PHONE BOOK
+
+Suppose we have a phone book containing names and phone numbers.
+
+The names are arranged alphabetically.
+
+Our goal is to find: John Harvard
+
+This is similar to searching through the contacts application on a phone.
+There are several possible algorithms we could use.
+
+# ALGORITHM 1 — ONE PAGE AT A TIME
+
+The simplest approach is:
+
+1. Start at the beginning.
+2. Look at the first page.
+3. If John Harvard is not there, turn one page.
+4. Repeat until John Harvard is found.
+
+This algorithm is correct.
+
+If we carefully check every page, eventually we will either:
+
+- find John Harvard;
+- or reach the end and determine that he is not there.
+
+However, this approach can be very slow.
+
+Suppose the phone book contains: 1,000 pages
+In the worst case, we may need to look through almost: 1,000 pages
+
+So although the algorithm is correct, it may not be efficient.
+
+# LINEAR SEARCH
+
+This one-page-at-a-time strategy is an example of a linear approach.
+
+If there are: n pages
+we may need approximately: n steps
+
+As the size of the problem increases, the amount of work increases at roughly
+the same rate.
+
+# ALGORITHM 2 — TWO PAGES AT A TIME
+
+We could try to improve the first algorithm.
+
+Instead of checking every page, we could turn: two pages at a time.
+
+Conceptually: 2, 4, 6, 8, 10...
+
+This means we can move through the book approximately twice as quickly.
+
+If the phone book contains 1,000 pages, we may need only around: 500 page turns
+
+However, there is a problem. We might accidentally skip over John Harvard.
+For example, if John is on a page between two pages we checked, we could miss
+him.
+
+So the algorithm needs an additional rule. Once we realize that we have passed 
+the section where John should appear, we can go back one page and check whether 
+we skipped him. With this correction, the algorithm can still work correctly.
+
+Its approximate number of steps might look like: n / 2 + 1
+
+This is better than n, but it is still fundamentally linear.
+
+Why?
+
+Because if the phone book becomes twice as large, the amount of work also
+increases roughly proportionally.
+
+# ALGORITHM 3 — DIVIDE THE PROBLEM IN HALF
+
+Because the phone book is alphabetically sorted, we can use a much better
+strategy.
+
+Instead of starting at the beginning, we can open the book roughly in the
+middle.
+
+Suppose we open the book and find ourselves in the:
+
+M section
+
+We are searching for:
+
+John Harvard
+
+Since J comes before M alphabetically, we know John cannot be in the second
+half of the phone book.
+
+So we can completely ignore that half.
+
+Our problem has now changed from:
+
+1,000 pages
+
+to approximately:
+
+500 pages
+
+Then we repeat.
+
+Open the remaining section in the middle.
+
+Suppose we now reach:
+
+E
+
+John comes after E, so we can discard the left half.
+
+Now we have approximately:
+
+250 pages
+
+Then:
+
+125 pages
+
+Then roughly half again.
+
+We continue until eventually:
+
+* only one possible page remains;
+* or we determine that John Harvard is not in the phone book.
+
+# BINARY SEARCH
+
+This strategy is known as binary search.
+
+Binary search works by repeatedly dividing the search space in half.
+
+Conceptually:
+
+1,000
+↓
+500
+↓
+250
+↓
+125
+↓
+...
+↓
+1
+
+At every step, we remove approximately half of the remaining problem.
+
+The basic algorithm is:
+
+1. Look at the middle.
+2. Compare the middle value with the target.
+3. If it matches, we are done.
+4. If the target should come before it, search the left half.
+5. If the target should come after it, search the right half.
+6. Repeat.
+
+# BINARY SEARCH REQUIRES ORDER
+
+There is an important requirement.
+
+Binary search only works when the information is ordered in a useful way.
+
+For example, the phone book is:
+
+alphabetically sorted.
+
+This allows us to decide whether John Harvard must be:
+
+* before the current page;
+* or after the current page.
+
+If the names were randomly arranged, looking at the middle would not tell us
+which half we could safely discard.
+
+So the ordering of the data is what makes this algorithm possible.
+
+# LOGARITHMIC GROWTH
+
+Binary search behaves very differently from linear search.
+
+If we repeatedly divide the problem by 2, the number of steps is related to:
+
+log base 2 of n
+
+or:
+
+log2(n)
+
+We call this:
+
+logarithmic growth.
+
+This grows much more slowly than linear growth.
+
+For example, suppose a phone book grows from:
+
+1,000 pages
+
+to:
+
+2,000 pages
+
+A linear algorithm may now require roughly twice as many steps.
+
+But binary search needs only about one additional division.
+
+Why?
+
+Because:
+
+2,000
+↓
+1,000
+
+After one step, we are already back to a problem of the previous size.
+
+This is the power of repeatedly removing half of the remaining problem.
+
+# VISUALIZING EFFICIENCY
+
+We can visualize algorithms using a graph.
+
+On the horizontal axis:
+
+x-axis -> size of the problem
+
+For example:
+
+number of pages
+
+On the vertical axis:
+
+y-axis -> amount of work
+
+For example:
+
+* time;
+* number of page turns;
+* number of operations.
+
+A linear algorithm grows approximately like a straight line.
+
+For example:
+
+n
+
+A faster linear algorithm might look like:
+
+n / 2
+
+Its line is lower, but it still grows linearly.
+
+Binary search grows more slowly:
+
+log2(n)
+
+Its curve becomes much flatter as the problem grows.
+
+This means that binary search scales much better for large amounts of data.
+
+# EFFICIENCY MATTERS
+
+When designing algorithms, the limited resource may be:
+
+* execution time;
+* CPU power;
+* memory;
+* storage;
+* network bandwidth;
+* money;
+* people;
+* energy.
+
+A good algorithm tries to use available resources efficiently.
+
+The exact resource that matters depends on the problem.
+
+For one application, speed may matter most.
+
+For another, memory usage may matter more.
+
+Good computer science involves thinking about these trade-offs.
+
+# ALGORITHMS IN REAL SOFTWARE
+
+The same ideas appear in everyday software.
+
+When you search for someone in your phone's contacts, the phone needs an
+algorithm for finding matching entries.
+
+If you only have a few contacts, even a simple search may feel instant.
+
+But imagine searching through:
+
+1,000 entries
+
+10,000 entries
+
+1,000,000 entries
+
+or a database containing billions of records.
+
+The choice of algorithm becomes increasingly important as the amount of data
+grows.
+
+Efficient algorithms make large-scale software possible.
