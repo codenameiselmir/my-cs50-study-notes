@@ -1,0 +1,123 @@
+========================================
+Lecture 3 — Binary Notation
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Her konumda yalnızca bir birim daha eklemek yerine, rakamların bulundukları basamağa göre farklı 
+değerler taşıdığı bir sayı sistemi kullanabiliriz. Böyle bir sistem sayesinde, az sayıda sembolle 
+çok daha büyük sayıları ifade etmek mümkün olur.
+
+Bunun bir örneği ikili sayı sistemidir(Binary). Binary sistemde yalnızca iki rakam kullanılır: 
+0 ve 1. Ancak bu rakamların değeri, bulundukları basamağa göre değişir.
+
+Bilgisayarlar da 0 ve 1’leri farklı basamaklarda bir araya getirerek çok sayıda farklı sayıyı, 
+bunun üzerinden de metin, görüntü, ses gibi pek çok farklı bilgi türünü temsil edebilir.
+
+# SAYMAKTAN DESENLERE
+
+Tekli (unary) gösterimde önemli olan soru şudur: Kaç parmak açık?
+
+İkili sistem ise bize başka bir yaklaşım sunar. Yalnızca açık parmakların toplam sayısına bakmak 
+yerine, her parmağa ayrı bir konum verebilir ve her konumun iki durumdan birinde olmasını sağlayabiliriz: 0 veya 1.
+
+Şimdi üç parmak kullandığımızı düşünelim. Her parmak, diğerlerinden bağımsız olarak 0 ya da 1 durumunda olabilir.
+
+Böylece:
+
+2 × 2 × 2 = 8 farklı desen elde ederiz.
+
+Bunu daha kısa biçimde şöyle de yazabiliriz:
+
+2³ = 8 farklı desen
+
+Bu desenler şunlardır:
+
+* 000 → 0
+* 001 → 1
+* 010 → 2
+* 011 → 3
+* 100 → 4
+* 101 → 5
+* 110 → 6
+* 111 → 7
+
+# BITS
+
+Tek bir binary digit'e bit denir.
+
+“Bit” sözcüğü, İngilizce "binary digit" ifadesinin kısaltmasından gelir.
+
+Bir bit yalnızca iki değerden birini alabilir: 0 veya 1.
+
+Dolayısıyla:
+
+* 1 bit → 2 farklı desen
+* 2 bit → 4 farklı desen
+* 3 bit → 8 farklı desen
+* 4 bit → 16 farklı desen
+* 5 bit → 32 farklı desen
+
+Genel olarak, n bit ile 2ⁿ farklı desen oluşturulabilir.
+
+Eğer bu desenleri negatif olmayan tam sayıları temsil etmek için kullanırsak, 
+n bit ile 0’dan 2ⁿ − 1’e kadar olan değerleri gösterebiliriz.
+
+Örneğin:
+
+* 2 bit → 2² = 4 desen → 0 ile 3 arasındaki değerler
+* 4 bit → 2⁴ = 16 desen → 0 ile 15 arasındaki değerler
+* 8 bit → 2⁸ = 256 desen → 0 ile 255 arasındaki değerler
+
+Ama hâlâ cevaplamamız gereken önemli bir soru var: Neden örneğin 101 deseni 5 sayısını ifade etsin?
+
+Bunu anlamak için, zaten günlük hayatta kullandığımız sayı sistemine bakmak faydalı olacaktır.
+
+# İKİLİ SİSTEMDE BASAMAK DEĞERLERİ
+
+Şu ikili sayıyı ele alalım: 101
+
+Sağdan başlayarak her basamak, 2’nin bir kuvvetini temsil eder.
+
+Binary digit:    1    0    1
+Basamak değeri:  2²   2¹   2⁰
+
+Değeri:          4    2    1
+
+Buna göre ikili sistemdeki 101 sayısının değeri şöyle hesaplanır: (1 × 4) + (0 × 2) + (1 × 1)
+Yani: 4 + 0 + 1 = 5
+
+Dolayısıyla ikili sistemdeki 101, onluk sistemde 5 sayısına karşılık gelir.
+
+# BİLGİSAYARLAR NEDEN İKİLİ SİSTEM KULLANIR?
+
+Bilgisayarlar ikili sistemi, insanlar için daha kolay olduğu için değil, 
+elektronik donanımla çok iyi uyuştuğu için kullanır.
+
+Bunun neden kullanışlı olduğunu anlamak için basit bir ampul düşünelim. Bir ampulün iki temel durumu vardır:
+
+* Kapalı = 0
+* Açık = 1
+
+Bu, ikili rakamları fiziksel olarak temsil etmenin basit bir yolunu verir.
+
+Ampul kapalıysa bu durum 0, açıksa 1 olarak yorumlanabilir.
+
+Elektronik devreler de benzer bir mantıkla çalışır. Ancak ampul yerine elektriksel 
+sinyaller kullanılır. Düşük bir gerilim seviyesi 0'ı, daha yüksek bir gerilim seviyesi ise 1’i temsil edebilir.
+
+# İKİLİ SİSTEM SADECE BAŞLANGIÇ
+
+Şimdiye kadar ikili sistemi ağırlıklı olarak sayıları temsil etmek için kullandık. Ancak bilgisayarların yalnızca sayılarla çalışmadığını biliyoruz.
+
+Bilgisayarlar;
+
+* metinlerle,
+* görüntülerle,
+* seslerle,
+* videolarla
+* ve daha pek çok farklı bilgi türüyle çalışır.
+
+Buradaki önemli fikir şudur: Bilgisayarda işlenen tüm bu bilgiler, eninde sonunda bitlerle temsil edilmek zorundadır.
+
+İlerleyen bölümlerde, farklı 0 ve 1 desenlerine belirli anlamlar vererek harflerin, renklerin, seslerin ve diğer bilgi türlerinin nasıl temsil edilebildiğini göreceğiz.
