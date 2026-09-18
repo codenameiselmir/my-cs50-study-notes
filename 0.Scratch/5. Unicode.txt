@@ -76,28 +76,3 @@ A -> Unicode U+0041
 
 Unicode intentionally kept the original ASCII characters at the same numerical
 positions. This means ASCII is effectively contained inside Unicode.
-
-# UTF-8
-
-One of the most common Unicode encodings today is UTF-8.
-
-UTF-8 uses a variable number of bytes to represent characters.
-
-A character may use:
-
-* 1 byte;
-* 2 bytes;
-* 3 bytes;
-* or 4 bytes.
-
-Simple ASCII characters require only one byte.
-
-For example:
-
-A
-
-can still be represented using the same basic byte value used by ASCII.
-
-More complex characters may require additional bytes.
-
-This makes UTF-8 both flexible and compatible with ASCII.
