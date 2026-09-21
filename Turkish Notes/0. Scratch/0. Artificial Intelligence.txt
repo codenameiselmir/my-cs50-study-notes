@@ -1,0 +1,99 @@
+========================================
+Lecture 0 — Artificial Intelligence
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Yapay zeka, programlama dünyasını değiştirecek. Hatta şimdiden 
+kod yazma biçimimizi değiştirmeye başladı ve bu etkinin gelecekte 
+giderek daha da artacağı kesin.
+
+Aslında bu oldukça iyi bir gelişme. Yapay zeka sayesinde bilgisayardan 
+bir problemi çözmenize veya kodunuzdaki bir hatayı bulmanıza yardımcı 
+olmasını isteyebilirsiniz. Daha da iyisi, artık yazılımınıza hangi yeni 
+özellikleri eklemek istediğinizi yapay zekaya doğrudan söyleyebilirsiniz.
+
+# YAPAY ZEKA PROGRAMCILARA NASIL YARDIMCI OLABİLİR
+
+Yapay zeka, yazılım geliştirme sürecinin birçok aşamasında programcılara yardımcı olabilir. Örneğin:
+
+- Bilinmeyen kodları veya kavramları açıklamak;
+- Hataları bulmak ve olası yanlışları tespit etmek;
+- Programlama problemlerine çözüm önerileri sunmak;
+- Küçük kod parçaları oluşturmak;
+- Mevcut kodu yeniden düzenlemeye veya iyileştirmeye yardımcı olmak;
+- Testler, dokümantasyon veya tekrarlayan kodlar yazmak;
+- Geliştiricilerin gereksinimleri çalışan uygulamalara dönüştürmesine yardımcı olmak.
+
+Geçmişte programcılar, neredeyse her fikri kendi başlarına koda dönüştürmek zorundaydı. 
+Günümüzde ise yapay zeka araçları bu işlerin bir kısmında yardımcı olabiliyor. Bu sayede 
+geliştiriciler; problemi anlamaya, yazılımın ne yapması gerektiğine karar vermeye ve olası 
+çözümleri değerlendirmeye daha fazla odaklanabiliyor.
+
+# İNSAN KAPASİTESİNİN SINIRLARI
+
+Gerçek şu ki, uzun zamandır asıl sınırlayıcı unsur biz insanlar olduk.
+
+Bir günde yalnızca belirli sayıda saat var ve bir ekipte çalışabilecek 
+geliştirici sayısı da sınırlı. Buna karşılık yazılım projelerinde genellikle 
+yapılması gereken çok fazla iş bulunur:
+
+- Düzeltilmesi gereken hatalar;
+- Geliştirilmesi gereken özellikler;
+- Yazılması gereken testler;
+- İncelenmesi gereken kodlar;
+- Güncel tutulması gereken dokümantasyonlar;
+- Araştırılması gereken problemler.
+
+Yapay zeka, bazı görevleri daha hızlı yerine getirerek ve geliştiricilerin 
+üzerindeki iş yükünü azaltarak bu konuda yardımcı olabilir. Tekrarlayan 
+işleri üstlenebilir, çözümlere daha hızlı ulaşılmasına yardımcı olabilir 
+ve bir geliştiricinin daha fazla işi tamamlamasını sağlayabilir.
+
+Ancak doğru çalışan bir yazılımı baştan sona kendi başına geliştirmesi 
+konusunda yapay zekaya tamamen güvenilmemelidir. Yapay zeka tarafından 
+üretilen kodlarda hatalar, güvenlik açıkları, yanlış yaklaşımlar veya 
+verimsiz çözümler bulunabilir. Bu nedenle programcıların, yapay zekanın 
+ürettiği kodu anlayabilecek ve doğruluğunu kontrol edebilecek yeterli 
+bilgiye hala sahip olması gerekir.
+
+# PROGRAMLAMANIN TEMELLERİ NEDEN HALA ÖNEMLİ
+
+Yapay zeka giderek daha önemli hale gelse de temel programlama bilgisi 
+hala büyük önem taşıyor. Programcıların, bilişim ve yazılım geliştirmenin 
+temelinde yatan şu temel kavramları anlamaları gerekiyor:
+
+- Büyük bir problemi daha küçük problemlere ayırmak;
+- Girdileri ve çıktıları anlamak;
+- Algoritmalar tasarlamak;
+- Bir programın nasıl çalıştığını anlamak;
+- Veriyi ve verinin nasıl temsil edildiğini anlamak;
+- Hataları bulmak ve düzeltmek;
+- Doğru araç ve yöntemleri seçmek;
+
+Temel programlama bilgisi olmadan, yapay zeka tarafından üretilen kodun hatalı,
+eksik ya da anlaşılması güç olduğunu fark etmek daha zor olur. Bu nedenle programlamanın
+temellerini bilmek, geliştiricilerin yapay zekanın ürettiği her şeyi olduğu gibi kabul 
+etmek yerine onu daha bilinçli ve etkili bir şekilde kullanmalarına yardımcı olur.
+
+# YARDIMCI PİLOT OLARAK YAPAY ZEKA
+
+Yazılım geliştirmede yapay zekayı düşünmenin faydalı yollarından biri,
+onu bir yardımcı veya eşlikçi olarak görmektir.
+
+Yapay zeka, geliştiriciye şu konularda yardımcı olabilir:
+
+- Olası uygulama yöntemleri oluşturmak;
+- Bilinmeyen kavramları açıklamak;
+- Hataları tespit etmek;
+- İyileştirme önerileri sunmak;
+- Alternatif çözümleri araştırmak;
+- Tekrarlayan görevleri otomatikleştirmek;
+- Daha verimli çalışmak.
+
+Ancak problemi doğru anlamak ve ortaya çıkan sonucun doğru olup olmadığını 
+kontrol etmek yine programcının sorumluluğundadır.
+
+En önemli beceri, kodun her satırını elle yazmak değildir. Asıl önemli olan; yazılımın 
+nasıl çalıştığını anlamak, problem çözebilmek, gereksinimleri açık bir şekilde ifade etmek, 
+araçları doğru kullanmak ve elde edilen sonuçları kontrol etmektir.
