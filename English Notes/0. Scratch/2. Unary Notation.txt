@@ -1,0 +1,32 @@
+========================================
+Lecture 2 — Unary Notation
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Humans can represent information using languages such as English, numbers,
+symbols, pictures, and many other forms. However, computers use a simpler system.
+
+# COMPUTERS AND NUMBERS
+
+Unary notation is a number system where each value is represented by repeating
+a single symbol. For example, we can use our fingers to represent numbers.
+
+1 -> one finger
+2 -> two fingers
+3 -> three fingers
+4 -> four fingers
+5 -> five fingers
+
+Each additional finger represents one additional value. In this sense, our 
+fingers can be used as a simple unary counting system.
+
+# LIMITATIONS OF UNARY NOTATION
+
+Unary notation is easy to understand, but it is very limited. With one hand, 
+we can easily count only from 1 to 5 if each finger represents one number.
+
+If we want to count higher, we need more things to represent additional values,
+such as another hand, our toes, and more.
+
+This makes unary notation inefficient for representing large numbers.
