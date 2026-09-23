@@ -1,6 +1,6 @@
 ========================================
 Lecture 3 — Binary Notation
-Repository: cs50-study-notes
+Repository: my-cs50-study-notes
 Directory: 0. Scratch
 ========================================
 
