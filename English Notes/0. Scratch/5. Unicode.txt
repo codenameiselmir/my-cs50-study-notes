@@ -1,0 +1,76 @@
+========================================
+Lecture 5 — Unicode
+Repository: cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+ASCII gave computers a standard way to represent text using numbers.
+
+For example:
+
+A -> 65
+B -> 66
+a -> 97
+
+This worked well for basic English text, but there was an obvious problem.
+
+The world contains far more characters than ASCII can represent.
+
+Different languages use:
+
+- accented characters;
+- different alphabets;
+- different writing systems;
+- thousands of unique symbols;
+- mathematical symbols;
+- currency symbols;
+- emojis;
+- and many other characters.
+
+ASCII simply did not have enough possible values to represent all of them.
+
+# WHAT IS UNICODE?
+
+Unicode is a universal standard for representing text.
+
+Its goal is to assign a unique number to characters from writing systems around
+the world.
+
+This includes:
+
+- Latin characters;
+- Arabic characters;
+- Chinese characters;
+- emojis;
+- and much more.
+
+Instead of different computers inventing their own numbers for characters,
+Unicode provides a shared international standard.
+
+The basic idea is similar to ASCII: Character -> Number
+
+But Unicode supports a vastly larger collection of characters.
+
+# CODE POINTS
+
+In Unicode, each character is assigned a unique value called a code point.
+
+Code points are usually written using the format: U+XXXX
+
+For example:
+
+A -> U+0041
+
+This is the Unicode code point for uppercase A.
+
+Notice something interesting:
+
+ASCII decimal 65 = hexadecimal 41
+
+So:
+
+A -> ASCII 65
+A -> Unicode U+0041
+
+Unicode intentionally kept the original ASCII characters at the same numerical
+positions. This means ASCII is effectively contained inside Unicode.
