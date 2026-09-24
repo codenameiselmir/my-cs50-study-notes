@@ -1,6 +1,6 @@
 ========================================
 Lecture 4 — ASCII
-Repository: cs50-study-notes
+Repository: my-cs50-study-notes
 Directory: 0. Scratch
 ========================================
 
