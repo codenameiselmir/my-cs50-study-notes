@@ -1,0 +1,66 @@
+========================================
+Lecture 1 — Computer Science
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Bilgisayar bilimi, bilginin ne olduğunu ve onunla nasıl 
+çalışabileceğimizi inceleyen bir bilim dalıdır.
+
+- Bilgi nasıl temsil edilebilir?
+- Bilgi nasıl saklanabilir?
+- Bilgi nasıl işlenebilir?
+- Bilgi, problemleri çözmek için nasıl kullanılabilir?
+
+Bilgisayar bilimi yalnızca bilgisayarlar veya programlama ile ilgili değildir. 
+Bilgisayarlar ve programlama dilleri, bilgisayar bilimindeki fikirleri gerçek 
+hayattaki problemlere uygulamamıza yardımcı olan araçlardır.
+
+# HESAPLAMALI DÜŞÜNME
+
+Bilgisayar bilimindeki önemli kavramlardan biri hesaplamalı düşünmedir. 
+Hesaplamalı düşünme, bilgisayar bilimindeki fikir ve yöntemleri gerçek
+dünyadaki problemlere uygulamak anlamına gelir.
+
+Bu yaklaşım; bir problem üzerinde dikkatlice düşünmeyi, hangi bilgilerin 
+mevcut olduğunu anlamayı, hangi adımların gerektiğine karar vermeyi ve 
+çözüme ulaşmak için verimli bir yol bulmayı içerir.
+
+Bu düşünme biçimi, problem doğrudan bir bilgisayarla ilgili olmasa bile faydalı olabilir.
+
+# PROBLEM ÇÖZME OLARAK BİLGİSAYAR BİLİMİ
+
+Programlama, bilgisayar biliminin önemli bir parçasıdır; ancak kod yazmayı öğrenmek nihai 
+amaç değildir. Programlama dilleri, bilgisayarlar, algoritmalar ve diğer teknolojiler, 
+programcıların problemleri çözmek için kullanabileceği araç ve yöntemlerdir.
+
+Bir problem, basit bir model kullanılarak şu şekilde gösterilebilir:
+
+Input -> [ Process ] -> Output
+
+- Girdi, başlangıçta elimizde bulunan bilgiyi veya çözmek istediğimiz problemi temsil eder.
+- Çıktı, elde etmek istediğimiz sonucu veya çözümü temsil eder.
+- İşlem ise girdiyi çıktıya dönüştüren adımları temsil eder.
+
+# İŞLEM
+
+İşlem kutusu, bir girdiyi istenen çıktıya dönüştürmek için gereken adımları temsil eder.
+
+Girdi → [ İşlem ] → Çıktı
+
+Bu işlem kutusunun içinde problemi çözmek için kullanılan talimatlar,
+algoritmalar, hesaplamalar ve kararlar yer alır.
+
+Örneğin:
+
+- Girdi, bir sayı listesi olabilir.
+- İşlem kutusu, bu sayıları sıralamak için gereken talimatları içerebilir.
+- Çıktı ise aynı sayıların küçükten büyüğe sıralanmış hâli olabilir.
+
+Bilgisayar bilimi, bu işlem kutusunun içinde neler gerçekleşmesi gerektiğini 
+nasıl tasarlayacağımızı anlamamıza yardımcı olur. Amaç, belirli bir girdiyi 
+alıp beklenen çıktıyı üreten açık ve doğru bir süreç oluşturmaktır.
+
+Bu açıdan bakıldığında bilgisayar bilimi, temelde problem çözme üzerine 
+çalışan bir bilim dalıdır: problemi anlamak, probleme ait bilgileri temsil
+etmek, bir çözüm süreci tasarlamak ve istenen sonucu elde etmek.
