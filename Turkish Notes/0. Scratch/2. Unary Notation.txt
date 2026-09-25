@@ -1,0 +1,34 @@
+========================================
+Lecture 2 — Unary Notation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+İnsanlar bilgiyi İngilizce gibi diller, sayılar, semboller,
+resimler ve daha birçok farklı biçim kullanarak temsil edebilir. 
+Ancak bilgisayarlar daha basit bir sistem kullanır.
+
+# BİLGİSAYARLAR VE SAYILAR
+
+Tekli gösterim (unary notation), her değerin tek bir sembolün tekrar 
+edilmesiyle temsil edildiği bir sayı sistemidir. Örneğin, sayıları 
+temsil etmek için parmaklarımızı kullanabiliriz.
+
+1 → bir parmak
+2 → iki parmak
+3 → üç parmak
+4 → dört parmak
+5 → beş parmak
+
+Eklenen her parmak, değerin bir artmasını temsil eder. Bu açıdan bakıldığında
+parmaklarımız, basit bir tekli sayma sistemi olarak kullanılabilir.
+
+# TEKLİ GÖSTERİMİN SINIRLARI
+
+Tekli gösterimi anlamak kolaydır, ancak oldukça sınırlıdır. Her parmak bir değeri
+temsil ediyorsa, tek elimizle kolayca yalnızca 1'den 5'e kadar sayabiliriz.
+
+Daha büyük sayıları temsil etmek istediğimizde ise ikinci elimiz, ayak parmaklarımız 
+veya başka nesneler gibi ek araçlara ihtiyaç duyarız.
+
+Bu nedenle tekli gösterim, büyük sayıları temsil etmek için verimli bir yöntem değildir.
