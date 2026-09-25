@@ -1,0 +1,134 @@
+========================================
+Lecture 3 — Binary Notation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Her konumun yalnızca bir ek değeri temsil ettiği bir sistem kullanmak yerine, 
+her konumun farklı bir anlam taşıdığı bir sayı sistemi kullanabiliriz.
+
+Bu sayede daha az sembol kullanarak çok daha büyük sayıları temsil edebiliriz. 
+Bu sistemlerden biri ikili sayı sistemidir (binary). İkili sayı sistemi yalnızca 
+iki rakam kullanır: 0 ve 1.
+
+Bu iki rakamı farklı konumlarda bir araya getirerek bilgisayarlar birçok farklı sayıyı 
+ve zamanla birçok farklı türde bilgiyi temsil edebilir.
+
+# SAYMAKTAN ÖRÜNTÜLERE
+
+Tekli gösterimde önemli olan soru şudur: Kaç parmak var?
+
+İkili sayı sistemi ise bize farklı bir yaklaşım sunar. Yalnızca kaldırılmış parmakların 
+toplam sayısına bakmak yerine, her parmağa ayrı bir konum verebilir ve her konumun iki 
+durumdan birini almasına izin verebiliriz.
+
+Şimdi üç parmak kullandığımızı düşünelim. Her parmak, diğerlerinden 
+bağımsız olarak 0 veya 1 değerini alabilir. 
+
+Bu durumda: 2 × 2 × 2 = 8 farklı örüntü
+
+veya daha kısa bir ifadeyle: 2³ = 8 farklı örüntü
+
+Bu örüntüler şunlardır:
+
+- 000 -> 0
+- 001 -> 1
+- 010 -> 2
+- 011 -> 3
+- 100 -> 4
+- 101 -> 5
+- 110 -> 6
+- 111 -> 7
+
+# BITS
+
+Tek bir ikili rakama bit denir. “Bit” kelimesi, İngilizcedeki binary digit 
+ifadesinden gelir. Bir bit, iki değerden birini alabilir: 0 veya 1.
+
+Dolayısıyla:
+
+- 1 bit, 2 farklı örüntü oluşturabilir.
+- 2 bit, 4 farklı örüntü oluşturabilir.
+- 3 bit, 8 farklı örüntü oluşturabilir.
+- 4 bit, 16 farklı örüntü oluşturabilir.
+- 5 bit, 32 farklı örüntü oluşturabilir.
+
+Genel olarak: n bit, 2ⁿ farklı örüntüyü temsil edebilir.
+
+Bu örüntüleri negatif olmayan tam sayıları temsil etmek için kullanırsak, 
+n bit ile şu aralıktaki değerleri gösterebiliriz: 0 ile 2ⁿ − 1 arası
+
+Örneğin:
+
+- 2 bit → 2² = 4 örüntü → 0 ile 3 arasındaki değerler
+- 4 bit → 2⁴ = 16 örüntü → 0 ile 15 arasındaki değerler
+- 8 bit → 2⁸ = 256 örüntü → 0 ile 255 arasındaki değerler
+
+Ancak hâlâ önemli bir sorumuz var: 101 gibi bir örüntü neden 5 sayısını ifade etsin?
+
+# İKİLİ SAYILARI OKUMAK
+
+Günlük hayatta kullandığımız ondalık sayı sisteminde, 
+her basamak 10’un bir kuvvetini temsil eder.
+
+Örneğin, 347 sayısında:
+
+- 3, yüzler basamağındadır.
+- 4, onlar basamağındadır.
+- 7, birler basamağındadır.
+
+Dolayısıyla şöyle yazabiliriz: 3347 = (3 × 100) + (4 × 10) + (7 × 1)
+
+İkili sayı sistemi de genel olarak aynı mantıkla çalışır. 
+Ancak 10’un kuvvetleri yerine 2’nin kuvvetlerini kullanır.
+
+# İKİLİ SAYI SİSTEMİNDE BASAMAK DEĞERLERİ
+
+101 ikili sayısını ele alalım.
+
+Sağdan başlayarak her basamak, 2’nin bir kuvvetini temsil eder.
+
+İkili rakam:     1    0    1
+Basamak değeri:  2²   2¹   2⁰
+Değer:           4    2    1
+
+Buna göre 101 ikili sayısının değeri: (1 × 4) + (0 × 2) + (1 × 1)
+Bu da: 4 + 0 + 1 = 5
+
+Dolayısıyla, ikili sayı sistemindeki 101, ondalık sayı sistemindeki 5 sayısını temsil eder.
+
+# BİLGİSAYARLAR NEDEN İKİLİ SAYI SİSTEMİNİ KULLANIR?
+
+Bilgisayarlar ikili sayı sistemini insanlar için daha kolay olduğu için değil, 
+elektronik donanımla son derece uyumlu çalıştığı için kullanır.
+
+Bunun neden kullanışlı olduğunu anlamak için basit bir ampul düşünelim. 
+Bir ampulün iki temel durumu olabilir:
+
+- Kapalı = 0
+- Açık = 1
+
+Bu, ikili rakamları fiziksel olarak temsil etmenin basit bir yolunu sunar. 
+Ampul kapalıysa bilgisayar bu durumu 0, açıksa 1 olarak yorumlayabilir.
+
+Elektronik devreler de benzer bir şekilde çalışır. Bilgisayarlar ampul 
+yerine elektrik sinyallerini kullanır. Düşük veya hiç olmayan bir voltaj 
+0 değerini, daha yüksek bir voltaj ise 1 değerini temsil edebilir.
+
+# İKİLİ SAYI SİSTEMİ SADECE BAŞLANGIÇ
+
+Şimdiye kadar ikili sayı sistemini ağırlıklı olarak sayıları temsil etmek 
+için kullandık. Ancak bilgisayarlar elbette yalnızca sayılarla çalışmaz.
+
+Bilgisayarlar;
+
+- Metin,
+- Görüntü,
+- Ses,
+- Video,
+- ve daha birçok farklı türde bilgiyle çalışır.
+
+Buradaki önemli nokta, tüm bu bilgilerin eninde sonunda bitler kullanılarak 
+temsil edilmesi gerektiğidir. İlerleyen bölümlerde, sıfır ve birlerden oluşan 
+örüntülere nasıl anlam kazandırıldığını ve bu örüntülerin harfleri, renkleri, 
+sesleri ve diğer bilgi türlerini nasıl temsil edebildiğini göreceğiz.
