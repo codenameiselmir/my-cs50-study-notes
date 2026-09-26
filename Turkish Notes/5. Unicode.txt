@@ -1,0 +1,80 @@
+========================================
+Lecture 5 — Unicode
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+ASCII, bilgisayarların metinleri sayılar kullanarak temsil 
+edebilmesi için standart bir yöntem oluşturdu.
+
+Örneğin:
+
+A -> 65
+B -> 66
+a -> 97
+
+Bu sistem temel İngilizce metinler için oldukça iyi çalışıyordu. 
+
+Ancak önemli bir sorun vardı: Dünyada, ASCII'nin temsil edebileceğinden 
+çok daha fazla karakter bulunuyordu.
+
+Farklı diller ve yazı sistemleri;
+
+- aksanlı harfler,
+- farklı alfabeler,
+- farklı yazı sistemleri,
+- binlerce farklı sembol,
+- matematiksel semboller,
+- para birimi sembolleri,
+- emojiler
+- ve daha birçok farklı karakter kullanır.
+
+ASCII'nin sahip olduğu değer aralığı, tüm bu karakterleri temsil etmek için yeterli değildi.
+
+# UNICODE NEDİR?
+
+Unicode, metinleri temsil etmek için kullanılan evrensel bir standarttır.
+
+Amacı, dünyanın farklı yazı sistemlerinde kullanılan 
+her karaktere benzersiz bir sayı atamaktır.
+
+- Latin alfabesindeki karakterleri,
+- Arapça karakterleri,
+- Çince karakterleri,
+- emojileri
+- ve çok daha fazlasını destekler.
+
+Unicode'dan önce farklı bilgisayarlar veya sistemler, aynı karakterleri farklı 
+sayılarla temsil edebiliyordu. Unicode ise bu karmaşayı önlemek için ortak ve 
+uluslararası bir standart sunar.
+
+Temel mantığı ASCII'ye oldukça benzer: Character -> Number
+
+Ancak Unicode, ASCII'ye kıyasla çok daha fazla karakteri temsil edebilir. Bu sayede 
+farklı dillerdeki metinler, semboller ve emojiler bilgisayarlar arasında daha tutarlı 
+bir şekilde saklanabilir ve görüntülenebilir.
+
+# CODE POINT NEDİR?
+
+Unicode'da her karaktere code point (kod noktası) adı verilen benzersiz bir değer atanır.
+
+Code point'ler genellikle şu formatta gösterilir: U+XXXX
+
+Örneğin büyük A harfinin Unicode code point'i:
+
+A -> U+0041
+
+Burada dikkat çekici bir detay vardır. ASCII'de büyük A harfinin decimal (ondalık) 
+değeri 65'tir. 65 sayısının hexadecimal (onaltılık) karşılığı ise 41'dir.
+
+ASCII decimal 65 = hexadecimal 41
+
+Dolayısıyla:
+
+A -> ASCII 65
+A -> Unicode U+0041
+
+Unicode tasarlanırken ASCII'deki mevcut karakterlerin sayısal konumları 
+özellikle korunmuştur. Yani ASCII'deki A karakteri hangi sayısal değeri 
+temsil ediyorsa, Unicode'da da aynı değer korunur. Bu nedenle ASCII 
+karakter setinin Unicode'un içerisinde yer aldığını söyleyebiliriz.
