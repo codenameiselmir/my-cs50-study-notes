@@ -1,0 +1,147 @@
+========================================
+Lecture 6 — Color
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Bir bilgisayar, “kırmızı” veya “mavi” gibi renkleri bir insanın 
+algıladığı şekilde anlayamaz. Bunun yerine, renkleri temsil etmek 
+için sayısal bir sistem kullanırız.
+
+Bu sistemlerden en yaygın olanlarından biri RGB’dir.
+
+# RGB
+
+RGB, Red (Kırmızı), Green (Yeşil) ve Blue (Mavi) kelimelerinin baş harflerinden oluşur.
+
+Temel mantık şudur: Birçok farklı renk, bu üç rengin farklı 
+miktarlarda karıştırılmasıyla elde edilir:
+
+- Red;
+- Green;
+- Blue.
+
+Örnek olarak: (72, 73, 33)
+
+- Red   -> 72
+- Green -> 73
+- Blue  -> 33
+
+Bu üç değer bir araya geldiğinde belirli bir renk ortaya çıkar.
+
+Bu örnekte elde edilen renk, kabaca koyu sarı veya zeytin yeşiline yakın bir renktir.
+
+# HER RENK BİR SAYIYLA TEMSİL EDİLİR
+
+Yaygın kullanılan RGB sisteminde her renk kanalı için 8 bit ayrılır.
+
+8 bit ile: 2⁸ = 256 farklı değer temsil edilebilir.
+
+Bu nedenle her renk kanalı 0 ile 255 arasında bir değer alabilir.
+
+Yani:
+
+Red   -> 0 to 255
+Green -> 0 to 255
+Blue  -> 0 to 255
+
+Bu değerleri değiştirerek çok sayıda farklı renk oluşturabiliriz.
+
+# AYNI BİTLER FARKLI ANLAMA GELEBİLİR
+
+Şu üç sayıyı tekrar ele alalım: (72, 73, 33)
+
+Eğer bu değerleri ASCII olarak yorumlarsak:
+
+72 -> H
+73 -> I
+33 -> !
+
+Ancak aynı sayıları RGB değerleri olarak yorumlarsak:
+
+Red   -> 72
+Green -> 73
+Blue  -> 33
+
+bu kez bir rengi temsil ederler.
+
+Bu örnek, önceki derslerde öğrendiğimiz önemli bir fikri gösterir:
+
+Bitlerin tek başına belirli bir anlamı yoktur.
+
+Anlam, yazılımın bu bitleri nasıl yorumladığına bağlıdır.
+
+Aynı bit dizisi;
+
+* bir metni,
+* bir sayıyı,
+* bir rengi,
+* bir görüntünün parçasını
+* veya tamamen farklı bir veriyi temsil edebilir.
+
+Yani bitlerin ne anlama geldiğini bağlam belirler.
+
+# PİKSELLER
+
+Dijital görüntüler, piksel adı verilen çok küçük noktalardan oluşur.
+
+Pixel kelimesi, Picture Element yani Görüntü Elemanı ifadesinin kısaltmasıdır.
+
+Bir dijital görüntüye yeterince yakından bakarsak, görüntüyü oluşturan bu küçük 
+kareleri tek tek görebiliriz. Her pikselin kendine ait bir rengi vardır.
+
+Örneğin bir pikselin renk değeri (255, 255, 0) olabilirken, 
+başka bir pikselin renk değeri (100, 50, 25) olabilir.
+
+Bilgisayar, farklı renklere sahip çok sayıda pikseli yan yana getirerek bütün 
+bir dijital görüntü oluşturur.
+
+# PİKSELLER VE BELLEK
+
+Bir pikselin standart RGB kullandığını düşünelim.
+
+RGB’de her piksel için 3 byte gerekir.
+
+Şimdi 1.000.000 pikselden oluşan bir görüntümüz olduğunu varsayalım.
+
+Her piksel 3 byte yer kaplıyorsa: 1.000.000 × 3 = 3.000.000 byte
+Bu da yaklaşık olarak: 3 MB eder.
+
+Bu basit hesaplama, görüntülerin neden kısa sürede oldukça fazla 
+depolama alanı kaplayabildiğini anlamamıza yardımcı olur.
+
+# GÖRÜNTÜ BOYUTLARI
+
+Dijital görüntülerin bir genişliği (width) ve bir yüksekliği (height) vardır.
+
+Bu boyutlar, görüntünün kaç pikselden oluştuğunu belirler.
+
+Örneğin bir görüntünün çözünürlüğü: 1920 x 1080 olabilir.
+
+Bu şu anlama gelir:
+
+- Genişlik: 1920 piksel
+- Yükseklik: 1080 piksel
+
+Genişlik, görüntüde yatay olarak kaç piksel bulunduğunu gösterir.
+Yükseklik ise dikey olarak kaç piksel bulunduğunu gösterir.
+
+Bir görüntüdeki toplam piksel sayısını bulmak için genişlik ile yüksekliği çarparız:
+
+genişlik × yükseklik
+
+Örneğin: 1920 * 1080 = 2,073,600 pixels
+
+Yani 1920 × 1080 çözünürlüğe sahip bir görüntü, toplamda 2.073.600 ayrı pikselden oluşur.
+
+Bu piksellerin her biri kendi renk bilgisini saklar. Bu nedenle bir görüntünün genişliği 
+veya yüksekliği arttıkça genellikle:
+
+* daha fazla piksel,
+* daha fazla renk bilgisi,
+* daha fazla bellek ve depolama alanı gerekir.
+
+Örneğin: 100 x 100 = 10,000 pixels
+ancak: 1000 x 1000 = 1,000,000 pixels
+
+Kısacası, bir görüntünün boyutları doğrudan içerdiği toplam piksel sayısını belirler.
