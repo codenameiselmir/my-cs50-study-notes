@@ -1,0 +1,80 @@
+========================================
+Lecture 5 — Unicode
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+ASCII, bilgisayarların metinleri sayılar kullanarak 
+temsil edebilmesi için standart bir yöntem sundu.
+
+Örneğin:
+
+A -> 65
+B -> 66
+a -> 97
+
+Bu sistem temel İngilizce metinler için oldukça iyi çalışıyordu. 
+Ancak ortada önemli bir sorun vardı: Dünyada, ASCII'nin temsil 
+edebileceğinden çok daha fazla karakter bulunuyordu.
+
+Farklı diller ve yazı sistemleri şunları kullanır:
+
+- Aksanlı karakterler,
+- Farklı alfabeler,
+- Farklı yazı sistemleri,
+- Binlerce farklı sembol,
+- Matematiksel semboller,
+- Para birimi sembolleri,
+- Emojiler,
+- ve Daha birçok karakter.
+
+ASCII'nin sahip olduğu olası değer sayısı, tüm bu karakterleri 
+temsil etmek için yeterli değildi.
+
+# UNICODE NEDİR?
+
+Unicode, metinleri temsil etmek için kullanılan evrensel bir standarttır.
+
+Amacı, dünyanın farklı bölgelerinde kullanılan yazı sistemlerindeki 
+karakterlerin her birine benzersiz bir sayı atamaktır.
+
+Unicode şunları kapsar:
+
+- Latin alfabesindeki karakterler,
+- Arapça karakterler,
+- Çince karakterler,
+- Emojiler,
+- ve Çok daha fazlası.
+
+Farklı bilgisayarların aynı karakterler için kendi sayı sistemlerini 
+oluşturması yerine, Unicode herkesin kullanabileceği ortak ve uluslararası 
+bir standart sunar.
+
+Temel fikir ASCII'ye oldukça benzerdir: Character -> Number
+
+Ancak Unicode, ASCII'ye kıyasla çok daha geniş bir karakter koleksiyonunu destekler.
+
+# CODE POINT'LER
+
+Unicode'da her karaktere code point adı verilen benzersiz bir değer atanır.
+
+Code point'ler genellikle şu formatta gösterilir: U+XXXX
+
+Örneğin: A -> U+0041
+
+Bu, büyük A harfinin Unicode code point'idir.
+
+Burada dikkat çekici bir nokta vardır:
+
+ASCII'de 65 = hexadecimal sistemde 41
+
+Yani:
+
+A -> ASCII 65
+A -> Unicode U+0041
+
+Unicode tasarlanırken, ASCII'deki orijinal karakterlerin sayısal konumları 
+özellikle korunmuştur. Bu nedenle ASCII karakterleri, Unicode içinde aynı 
+değerlerle yer almaya devam eder. 
+
+Başka bir deyişle: ASCII, Unicode'un bir alt kümesi olarak düşünülebilir.
