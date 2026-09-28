@@ -1,0 +1,93 @@
+========================================
+Lecture 7 — Representation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Şimdiye kadar bilgisayarların birçok farklı bilgi türünü 0 ve 1'lerden 
+oluşan bit dizileriyle temsil edebildiğini gördük. Bitleri şu tür bilgileri 
+temsil etmek için kullandık:
+
+- Sayılar,
+- Karakterler,
+- Renkler,
+- Görüntüler.
+
+Ancak burada önemli olan fikir şudur: Bitler tek başlarına bize ne anlama 
+geldiklerini söylemez. 0 ve 1'lerden oluşan bir bit dizisi, ancak yazılım 
+onu nasıl yorumlaması gerektiğini bildiğinde anlam kazanır.
+
+Aynı bit dizisi, bağlama göre:
+
+- Bir sayıyı,
+- Bir harfi,
+- Bir rengi,
+- Bir sesi,
+- Bir videoyu,
+- veya Tamamen farklı bir şeyi temsil edebilir.
+
+# KARMAŞIK BİLGİLERİN OLUŞTURULMASI
+
+Dijital bilgiyi bir hiyerarşi şeklinde düşünebiliriz.
+
+İlk olarak şununla başladık: Bitler.
+Daha sonra bitleri şunları temsil etmek için kullandık: Sayılar.
+Sayılar ise şunları temsil edebilir: Karakterler ve Renkler.
+Renkler bir araya getirilerek şunlar oluşturulabilir: Fotoğraflar.
+Görüntüler de art arda bir araya getirilerek şunlar oluşturulabilir: Videolar.
+
+Ancak tüm bu yapıların temelinde hâlâ aynı şey vardır: 0'lar ve 1'ler.
+
+# VİDEONUN TEMSİL EDİLMESİ
+
+Hızlıca çevrildiğinde hareket ediyormuş gibi görünen resimli bir kitap düşünelim.
+
+Resimlere yavaşça baktığınızda bunların birbirinden bağımsız görüntüler olduğunu 
+açıkça görebilirsiniz. Ancak sayfaları yeterince hızlı çevirdiğinizde, beyniniz 
+bu görüntüleri bir hareket olarak algılamaya başlar.
+
+Dijital videolar da temelde aynı mantıkla çalışır. Bir video, çok hızlı bir şekilde 
+art arda gösterilen görüntüler dizisi olarak düşünülebilir. Bu görüntülerin her birine 
+frame, yani kare denir. Örneğin bir video:
+
+- Saniyede 24 frame,
+- Saniyede 30 frame,
+- Saniyede 60 frame,
+- veya Başka bir kare hızında oynatılabilir.
+
+Örneğin saniyede 30 kare, bilgisayarın her saniye yaklaşık 30 farklı görüntü gösterdiği 
+anlamına gelir. Bu görüntüler bir kareden diğerine küçük farklılıklar gösterdiği için 
+beynimiz onları tek tek görüntüler olarak değil, kesintisiz bir hareket olarak algılar.
+
+# SESİN TEMSİL EDİLMESİ
+
+Bilgisayarlar sesi de sayılar kullanarak temsil edebilir. Sesin ölçülebilen ve sayısal 
+olarak ifade edilebilen bazı özellikleri vardır. Bunlardan bazıları şunlardır:
+
+- Frekans,
+- Süre,
+- Genlik.
+
+# MÜZİĞİN SAYILARLA TEMSİL EDİLMESİ
+
+Her müzik notasını birkaç sayı kullanarak temsil etmek üzere 
+ortak bir sistem belirlediğimizi düşünelim.
+
+Örneğin:
+
+- Sayı 1 -> Ses Yüksekliği(pitch)
+- Sayı 2 -> Süre
+- Sayı 3 -> Ses şiddeti
+
+Böyle bir veri dizisi kavramsal olarak şu şekilde görünebilir:
+
+(60, 100, 80)
+(64, 100, 70)
+(67, 200, 90)
+
+Bu sayıların tam olarak ne anlama geldiği, kullanılan veri formatına bağlıdır.
+
+Buradaki en önemli fikir şudur: Veriyi oluşturan yazılım ile veriyi okuyan yazılım, 
+bu sayıların ne anlama geldiği konusunda aynı kuralları kullanmalıdır. Eğer iki taraf 
+da aynı temsil biçimi üzerinde anlaşıyorsa, veriyi alan bilgisayar amaçlanan müziği 
+yeniden oluşturabilir.
