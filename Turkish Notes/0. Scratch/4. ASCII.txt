@@ -1,0 +1,91 @@
+========================================
+Lecture 4 — ASCII
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Şimdiye kadar bilgisayarların sayıları temsil etmek için ikili sayı 
+sistemini (binary) nasıl kullandığını gördük. Ancak bilgisayarların 
+bunun dışında farklı türde bilgileri de temsil edebilmesi gerekir. 
+
+Örneğin:
+
+- Harfler,
+- Karakter olarak yazılan rakamlar,
+- Noktalama işaretleri,
+- Semboller,
+- Boşluklar ve diğer özel karakterler.
+
+Bilgisayarlar temelde bitlerle çalıştığı için, bu karakterleri sayılar 
+kullanarak temsil edebileceğimiz bir yönteme ihtiyacımız vardır. Bu 
+probleme geliştirilen ilk çözümlerden biri ASCII'dir.
+
+# ASCII NEDİR?
+
+ASCII'nin açılımı American Standard Code for Information Interchange'dır. 
+Türkçeye, Bilgi Değişimi için Amerikan Standart Kodu olarak çevrilebilir.
+
+ASCII, bir karakter kodlama sistemidir. Karakter kodlama sistemi, karakterler 
+ile sayılar arasında bir eşleştirme tanımlar.
+
+Örneğin ASCII, büyük harflere belirli sayısal değerler atar:
+
+A -> 65
+B -> 66
+C -> 67
+
+Küçük harflerin de kendilerine ait değerleri vardır:
+
+a -> 97
+b -> 98
+c -> 99
+
+Diğer karakterlerin de sayısal karşılıkları bulunur:
+
+0 -> 48
+1 -> 49
+2 -> 50
+
+Space -> 32
+!     -> 33
+?     -> 63
+
+Buradaki en önemli fikir şudur: Bilgisayar aslında doğrudan "A" harfini saklamaz. 
+Bunun yerine, "A" harfini temsil eden bir sayı saklar. Daha sonra bu sayı da ikili 
+sayı sistemi, yani binary, kullanılarak temsil edilir.
+
+# KARAKTERLERDEN BINARY'YE
+
+Büyük A harfini ele alalım: A
+ASCII'de: A -> 65
+65 sayısının binary karşılığı ise: 65 -> 1000001
+
+Yani süreci şu şekilde düşünebiliriz: Character -> Number -> Binary
+
+Bilgisayar, aslında bu binary bit dizisini saklar. Yazılım ise bu bit dizisini 
+ASCII standardına göre yorumlar ve bunun "A" karakterini temsil ettiğini anlar.
+
+Bu durum, bilgisayar bilimindeki önemli bir fikri gösterir: Bitlerin tek başlarına 
+bir anlamı yoktur.
+
+Bitlerin ne anlama geldiği, onları nasıl yorumladığımıza bağlıdır. Aynı bit dizisi, 
+bulunduğu bağlama göre bir sayıyı, bir harfi, bir görüntünün parçasını veya tamamen 
+farklı bir bilgiyi temsil edebilir.
+
+# ASCII'NİN SINIRLAMALARI
+
+ASCII oldukça kullanışlı bir sistemdi, ancak sahip olduğu 128 farklı değer, 
+dünyadaki tüm yazı sistemlerini ve sembolleri temsil etmek için yeterli değildir.
+
+ASCII, temel İngilizce metinler için iyi çalışır. Ancak aşağıdaki gibi birçok 
+karakteri doğrudan temsil edemez:
+
+- Çince karakterler,
+- Arapça karakterler,
+- emojiler,
+- diğer birçok sembol ve alfabe.
+
+Bilgisayarlar dünyanın her yerinde kullanıldığı için, metinleri temsil edebilmek 
+adına çok daha geniş kapsamlı bir sisteme ihtiyaç vardır.
+
+Bu ihtiyaç, bizi Unicode gibi daha modern karakter kodlama sistemlerine götürür.
