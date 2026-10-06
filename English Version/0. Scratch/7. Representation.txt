@@ -1,0 +1,89 @@
+========================================
+Lecture 7 — Representation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+So far, we have seen that computers can represent many different kinds of
+information using patterns of zeros and ones. We have used bits to represent:
+
+* numbers;
+* characters;
+* colors;
+* images.
+
+But the important idea is that the bits themselves do not tell us what they mean.
+A pattern of zeros and ones only becomes meaningful when software knows how to
+interpret it. The same bits could represent:
+
+* a number;
+* a letter;
+* a color;
+* a sound;
+* a video;
+* or something else entirely.
+
+# BUILDING COMPLEX INFORMATION
+
+We can think of digital information as a hierarchy.
+
+We started with: Bits.
+Then we used bits to represent: Numbers.
+Numbers could then represent: Characters and Colors.
+Colors could be combined into: Images.
+And images can be combined into: Video.
+
+Everything still ultimately comes back to zeros and ones.
+
+# REPRESENTING VIDEO
+
+Think about a flip book. A flip book contains many individual pictures.
+
+If you slowly look at each picture, you can clearly see that they are separate
+images. But if you flip through them quickly enough, your brain begins to perceive
+motion. Digital video works according to the same basic idea. A video can be thought 
+of as a sequence of images shown very quickly.
+
+Each individual image is called a: Frame
+
+- 24 frames per second
+- 30 frames per second
+- 60 frames per second
+- or some other number.
+
+For example: 30 frames per second means that the computer displays approximately 
+30 different images every second. Because these images change slightly from one 
+frame to the next, our brains perceive continuous movement.
+
+# REPRESENTING SOUND
+
+Computers can also represent sound using numbers. Sound has properties that can 
+be measured and represented numerically. Some useful properties include:
+
+- frequency;
+- duration;
+- amplitude.
+
+# MUSIC AS NUMBERS
+
+Imagine that we agree to represent each musical note using several numbers.
+
+For example:
+
+- Number 1 -> pitch
+- Number 2 -> duration
+- Number 3 -> loudness
+
+A sequence might conceptually look like:
+
+(60, 100, 80)
+(64, 100, 70)
+(67, 200, 90)
+
+The exact meaning of these numbers depends on the format being used.
+
+The important idea is that both the software creating the data and the software
+reading the data must agree on what those numbers mean.
+
+If they agree on the representation, the receiving computer can reproduce the
+intended music.
