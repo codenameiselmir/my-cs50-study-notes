@@ -1,0 +1,167 @@
+========================================
+Lecture 8 — Algorithms
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+So far, we have learned how computers can represent many different kinds of
+information. For example, computers can represent:
+
+- text;
+- numbers;
+- images;
+- audio;
+- video;
+- and many other forms of data.
+
+But representing information is only the beginning. Once we have some input, 
+we still need to answer an important question: How do we actually solve a 
+problem using that input?
+
+The answer is: Algorithms.
+
+# WHAT IS AN ALGORITHM?
+
+An algorithm is a step-by-step process for solving a problem.
+
+We can connect this idea to the model we introduced earlier:
+
+Input -> [ Process ] -> Output
+
+The algorithm describes what happens inside the process.
+
+The algorithm receives some information as input, performs a sequence of steps,
+and produces the desired result.
+
+# ALGORITHMS ARE EVERYWHERE IN SOFTWARE
+
+There are many different algorithms running inside the software we use every
+day.
+
+They exist in:
+
+- phones;
+- laptops;
+- desktop computers;
+- websites;
+- applications;
+- operating systems.
+
+In fact, software can be thought of as algorithms implemented using code.
+
+An algorithm describes the solution. Code expresses that solution in a 
+programming language that a computer can execute.
+
+For example, an algorithm might be implemented using:
+
+- C++;
+- Java;
+- Python;
+- JavaScript;
+- or another programming language.
+
+No matter which programming language we choose, the fundamental idea remains
+the same: We are giving the computer a sequence of instructions that tells it 
+how to solve a problem.
+
+# ALGORITHMS AND PROGRAMMING LANGUAGES
+
+Learning computer science is not simply about learning as many programming
+languages as possible. Different programming languages can be useful for 
+different kinds of problems.
+
+A particular language may:
+
+- make a certain problem easier to express;
+- provide better tools for a particular task;
+- reduce the amount of code we need to write;
+- make development faster;
+- make a solution easier to maintain.
+
+For this reason, learning multiple languages is useful not because knowing more
+languages is itself the goal. Instead, different languages give us different tools 
+for solving problems. The important skill is learning how to understand a problem and 
+choose an appropriate method for solving it.
+
+# SEARCHING FOR A CONTACT
+
+Consider the Contacts application on a phone.
+
+A person might have:
+
+- 10 contacts;
+- 100 contacts;
+- 1,000 contacts;
+- or even more.
+
+Suppose we want to find: John Harvard
+
+When we begin typing John's first name or last name, the application may
+immediately begin filtering the list. After only a short moment, hundreds 
+or thousands of contacts may be reduced to the single result we are looking for.
+
+The computer therefore needs some method for finding information inside a
+collection of data. To understand how such methods can differ, imagine an 
+older version of the same problem: A physical phone book.
+
+# THE PHONE BOOK PROBLEM
+
+Suppose we have an alphabetically ordered phone book containing: 1,000 pages
+
+We want to find: John Harvard
+
+There can be many different algorithms for solving the same problem.
+
+- Some approaches are simple.
+- Some are faster.
+- Some are much more efficient than others.
+
+# FIRST APPROACH — ONE PAGE AT A TIME (n)
+
+One possible algorithm is very simple.
+
+Start from the beginning of the phone book.
+
+Then:
+
+1. Check the current page.
+2. Look for John Harvard.
+3. If he is not there, move to the next page.
+4. Repeat until we find him or reach the end.
+
+This algorithm can solve the problem.
+
+However, it can also be very slow. Suppose John Harvard appears close to 
+the end of a 1,000-page phone book. We might have to check almost: 1,000 pages
+before finding him. So although the algorithm is correct, it may require a large 
+amount of work.
+
+# SECOND APPROACH — TWO PAGES AT A TIME (n/2)
+
+We could try to improve the first approach by moving through the phone book more
+quickly. Instead of processing one page at a time, we could process approximately two
+pages at a time. This reduces the amount of work.
+
+With a 1,000-page phone book, instead of performing approximately 1,000 steps,
+we might perform around: 500 steps
+
+However, the important question is not only whether an algorithm is faster for
+one particular example. We also want to understand: How does the algorithm behave 
+when the problem becomes larger? If the phone book doubles from: 1,000 pages to 2,000 
+pages. the amount of work also roughly doubles. So although this second approach is faster, 
+its amount of work still grows in a similar way as the size of the problem grows.
+
+# THIRD APPROACH — DIVIDE THE PROBLEM IN HALF(Binary Search) (log₂n)
+
+We can do much better by using the fact that the phone book is arranged
+alphabetically. Instead of beginning at the first page, we can open the 
+phone book roughly in the middle. 
+
+Suppose we open the 1,000-page book and land somewhere in the: M section
+We are searching for: Harvard
+
+Alphabetically, H comes before M. Therefore, John Harvard cannot be located 
+in the second half of the phone book. This means that we can completely eliminate 
+approximately 500 pages without looking through them individually.
+
+Our problem has now changed from: 1,000 pages to 500 pages
