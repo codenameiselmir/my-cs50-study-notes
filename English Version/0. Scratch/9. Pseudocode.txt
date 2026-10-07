@@ -1,0 +1,102 @@
+========================================
+Lecture 9 — Pseudocode
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+In the previous lecture, we learned that an algorithm is a step-by-step process
+for solving a problem. For example, we described how we could search for someone 
+in an alphabetically sorted phone book by repeatedly dividing the problem in half.
+
+But once we understand the algorithm, another question appears:
+How do we describe that algorithm clearly before writing actual code?
+
+# WHAT IS PSEUDOCODE?
+
+An algorithm describes the steps required to solve a problem. Pseudocode gives us a 
+human-readable way to express those steps before writing real code. It looks somewhat 
+like programming code, but it does not belong to any specific programming language.
+
+It allows us to describe what a program should do without worrying about the
+exact syntax of languages such as:
+
+- C;
+- C++;
+- Java;
+- Python;
+- JavaScript.
+
+# PSEUDOCODE IS NOT REAL CODE
+
+Pseudocode is not something that the computer can execute directly.
+
+For example:
+
+Find the middle of the phone book
+Check the name
+If the person is there
+Call the person
+
+This is understandable to a human. But a computer does not automatically 
+understand instructions written this way. Eventually, we must translate 
+those ideas into real code. The purpose of pseudocode is therefore not 
+execution. Its purpose is: clarity.
+
+# THERE IS NO SINGLE PSEUDOCODE LANGUAGE
+
+Unlike Java, Python, or C, pseudocode does not have one official syntax.
+Different programmers may write the same algorithm in slightly different ways.
+
+For example, one person might write:
+
+IF score >= 50
+PRINT "Pass"
+
+Another might write:
+
+if score is at least 50
+display "Pass"
+
+Both can be valid pseudocode if the intended logic is clear.
+
+The most important requirement is that the steps are understandable and
+unambiguous.
+
+# FROM ALGORITHM TO PSEUDOCODE
+
+Consider the phone book problem from the previous lecture.
+
+We want to find: John Harvard
+
+The phone book is alphabetically sorted.
+
+Our algorithm is:
+
+1. Open the phone book near the middle.
+2. Look at the current page.
+3. If John Harvard is on the page, call him.
+4. If John Harvard should appear earlier, search the left half.
+5. If John Harvard should appear later, search the right half.
+6. Repeat.
+7. If no pages remain, stop.
+
+We can express the same idea using pseudocode.
+
+For example:
+
+Pick up phone book
+Open to middle of phone book
+Look at page
+
+If John Harvard is on page
+Call John Harvard
+Else if John Harvard is earlier in phone book
+Open to middle of left half of phone book
+Go back to "Look at page"
+Else if John Harvard is later in phone book
+Open to middle of right half of phone book
+Go back to "Look at page"
+Else
+Quit
+
+This is much closer to the structure of a real program.
