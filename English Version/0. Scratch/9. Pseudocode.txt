@@ -11,7 +11,7 @@ in an alphabetically sorted phone book by repeatedly dividing the problem in hal
 But once we understand the algorithm, another question appears:
 How do we describe that algorithm clearly before writing actual code?
 
-# WHAT IS PSEUDOCODE?
+# WHAT IS PSEUDOCODE
 
 An algorithm describes the steps required to solve a problem. Pseudocode gives us a 
 human-readable way to express those steps before writing real code. It looks somewhat 
