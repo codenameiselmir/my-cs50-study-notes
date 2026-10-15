@@ -1,0 +1,76 @@
+========================================
+Lecture 0 — Artificial Intelligence
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Yapay zeka, programlama dünyasını değiştirecek. Aslında 
+bu değişim çoktan başladı bile. Kod yazma şeklimiz şimdiden 
+değişiyor ve yapay zekanın etkisi gelecekte daha da artacak.
+
+Aslında bu oldukça güzel bir gelişme. Yapay zeka sayesinde 
+artık bir problemi çözmek ya da kodunuzdaki bir hatayı bulmak 
+için bilgisayardan yardım alabiliyorsunuz. 
+
+Daha da güzeli, yazılımınıza eklemek istediğiniz yeni özellikleri 
+yapay zekaya anlatabiliyor ve bunları geliştirmenize yardımcı olmasını 
+isteyebiliyorsunuz.
+
+# İNSAN KAPASİTESİ KISITLAYICI FAKTÖRDÜ
+
+Gerçek şu ki, yazılım geliştirme sürecindeki en büyük sınırlamalardan biri 
+uzun zamandır biz insanlarız.
+
+Sonuçta bir günün 24 saati var ve bir ekipte çalışabilecek yazılımcı sayısı 
+da sınırlı. Buna karşılık, yazılım projelerinde yapılması gereken işler 
+neredeyse hiç bitmiyor:
+
+- Düzeltilmesi gereken hatalar,
+- Geliştirilmesi gereken yeni özellikler,
+- Yazılması gereken testler,
+- İncelenmesi gereken kodlar,
+- Güncel tutulması gereken dokümantasyonlar,
+- Araştırılıp çözülmesi gereken problemler...
+
+Tüm bunlar düşünüldüğünde, yazılımcıların zamanı ve iş gücü doğal olarak 
+yazılım geliştirme sürecinin hızını sınırlayabiliyor.
+
+Yapay zeka tam da bu noktada devreye giriyor. Bazı işleri çok daha hızlı 
+yapmamıza yardımcı olarak üzerimizdeki iş yükünü azaltabiliyor. Tekrarlayan 
+görevleri kolaylaştırıyor, problemlere daha hızlı çözüm bulmamızı sağlayabiliyor 
+ve bir yazılımcının çok daha fazla işi tamamlamasına yardımcı olabiliyor.
+
+Ancak burada dikkat etmemiz gereken önemli bir nokta var: Yapay zekanın tek başına 
+her zaman doğru ve güvenilir yazılımlar geliştirebileceğini düşünmemeliyiz. Çünkü 
+yapay zeka tarafından üretilen kodlarda da hatalar, güvenlik açıkları, yanlış 
+yaklaşımlar veya performans açısından verimsiz çözümler bulunabilir.
+
+Bu yüzden yazılımcıların hala sağlam bir teknik bilgiye sahip olması gerekiyor. 
+Yapay zekanın yazdığı kodu anlayabilmeli, doğruluğunu kontrol edebilmeli ve 
+gerektiğinde müdahale edebilmeliyiz.
+
+Kısacası yapay zeka, yazılımcının yerini almaktan çok, onun daha hızlı ve verimli 
+çalışmasını sağlayan güçlü bir yardımcı olarak düşünülmeli.
+
+# PROGRAMLAMANIN TEMELLERİNİ BİLMEK NEDEN HALA ÖNEMLİ
+
+Yapay zeka hayatımızda giderek daha fazla yer edinse de programlamanın temellerini 
+bilmek hala büyük önem taşıyor. Çünkü bir yazılımcının yalnızca kod yazmayı değil, 
+bilgisayarların ve yazılımların arkasındaki temel mantığı da anlaması gerekiyor.
+
+- Büyük ve karmaşık problemleri daha küçük, çözülmesi kolay parçalara ayırabilmek,
+- Girdilerin ve çıktıların nasıl çalıştığını anlamak,
+- Bir problemi çözmek için algoritmalar tasarlayabilmek,
+- Bir programın nasıl çalıştığını ve arka planda neler olduğunu kavrayabilmek,
+- Verilerin nasıl saklandığını ve bilgisayarlar tarafından nasıl temsil edildiğini anlamak,
+- Kodlardaki hataları tespit edip düzeltebilmek,
+- Karşılaşılan problemlere uygun araçları ve yöntemleri seçebilmek.
+
+Eğer programlamanın temellerini yeterince bilmiyorsak, yapay zekanın ürettiği kodun hatalı, 
+eksik veya mantıksız olduğunu fark etmemiz çok daha zor olabilir. Bu yüzden programlama 
+öğrenmek, yapay zekanın gelişmesiyle önemini kaybetmiyor. Aksine, yapay zekayı doğru 
+kullanabilmek için daha da değerli hale geliyor. 
+
+Çünkü asıl önemli olan, yapay zekanın yazdığı her kodu olduğu gibi kabul etmek değil; 
+o kodun ne yaptığını anlamak, doğruluğunu değerlendirmek ve gerektiğinde daha iyi bir 
+çözüm geliştirebilmek.
