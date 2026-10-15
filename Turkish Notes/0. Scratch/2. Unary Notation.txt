@@ -1,0 +1,37 @@
+========================================
+Lecture 2 — Unary Notation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Biz insanlar bilgiyi ifade etmek için İngilizce gibi dilleri, sayıları, 
+sembolleri, resimleri ve daha birçok farklı yöntemi kullanabiliyoruz. 
+
+Ancak bilgisayarlar bilgiyi temsil etmek için çok daha basit bir sistem kullanır.
+
+# BİLGİSAYARLAR VE SAYILAR
+
+Unary Notation, yani Tekli Sayı Sistemi, sayıların tek bir sembolün tekrar edilmesiyle 
+temsil edildiği bir sayı sistemidir. 
+
+- 1 sayısını göstermek için bir parmağımızı kaldırırız.
+- 2 sayısını göstermek için iki parmağımızı kaldırırız.
+- 3 sayısını göstermek için üç parmağımızı kaldırırız.
+- 4 sayısını göstermek için dört parmağımızı kaldırırız.
+- 5 sayısını göstermek için beş parmağımızı kaldırırız.
+
+Dikkat ederseniz, her yeni parmak kaldırdığımızda temsil ettiğimiz sayı bir artıyor.
+
+# TEKLİ SAYI SİSTEMİNİN SINIRLAMALARI
+
+Tekli Sayı Sistemi'ni anlamak oldukça kolaydır. Ancak bu sistemin önemli bir dezavantajı 
+vardır: Büyük sayıları temsil etmek pek pratik değildir. 
+
+Örneğin, her parmağın bir değeri temsil ettiğini düşünelim. Tek elimizi kullanarak yalnızca 
+1'den 5'e kadar sayabiliriz. Peki, ya 6 sayısını göstermek istersek?
+
+Bu durumda diğer elimizi kullanmamız gerekir. Daha da büyük sayılara ulaşmak istersek ayak 
+parmaklarımızı veya başka nesneleri kullanmak zorunda kalabiliriz.
+
+İşte bu nedenle, sayıları daha az sembolle ve daha verimli bir şekilde temsil edebilmek için 
+farklı sayı sistemlerine ihtiyaç duyarız.
