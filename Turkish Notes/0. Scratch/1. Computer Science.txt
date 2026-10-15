@@ -1,0 +1,62 @@
+========================================
+Lecture 1 — Computer Science
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Computer Science, bilgiyi ve bu bilgiyle neler yapabileceğimizi inceleyen bir bilim dalıdır.
+
+- Bilgiyi nasıl temsil edebiliriz?
+- Bilgiyi nasıl saklayabiliriz?
+- Bilgiyi nasıl işleyebiliriz?
+- Bilgiyi problemleri çözmek için nasıl kullanabiliriz?
+
+Aslında bilgisayar bilimi yalnızca bilgisayarlarla veya programlama yapmakla 
+ilgili değildir. Bilgisayarlar ve programlama dilleri, bilgisayar bilimindeki 
+fikirleri gerçek hayattaki problemlere uygulamamızı sağlayan araçlardır.
+
+# HESAPLAMALI DÜŞÜNME (COMPUTATIONAL THINKING)
+
+Hesaplamalı düşünme, bilgisayar biliminde kullanılan düşünme ve problem çözme 
+yöntemlerini gerçek hayattaki problemlere uygulamak demektir. Yani bir problemle 
+karşılaştığımızda doğrudan çözüme atlamak yerine önce problemi anlamaya çalışırız.
+
+Elimizde hangi bilgilerin olduğunu belirler, çözüm için hangi adımların gerektiğini 
+düşünür ve bizi sonuca ulaştıracak en verimli yöntemi bulmaya çalışırız. Üstelik bu 
+düşünme biçimi yalnızca yazılım geliştirirken değil, bilgisayarlarla doğrudan ilgisi
+olmayan günlük hayattaki problemleri çözerken de işimize yarayabilir.
+
+# BİR PROBLEM ÇÖZME BİLİMİ OLARAK COMPUTER SCIENCE
+
+Programlama, bilgisayar biliminin önemli bir parçasıdır. Ancak burada asıl amacımız 
+yalnızca kod yazmayı öğrenmek değildir. Çünkü programlama dilleri, bilgisayarlar, 
+algoritmalar ve diğer teknolojiler aslında problemleri çözmek için kullandığımız 
+araçlardan ibarettir.
+
+Input -> [ Process ] -> Output
+
+- Input : Başlangıçta elimizde bulunan bilgiler veya çözmek istediğimiz problem.
+- Process : Elimizdeki bilgileri kullanarak sonuca ulaşmak için gerçekleştirdiğimiz işlemler.
+- Output : İşlemler sonucunda elde etmek istediğimiz sonuç veya çözüm.
+
+# İŞLEM AŞAMASI (THE PROCESS)
+
+Bu bölüm, elimizdeki girdiyi istediğimiz çıktıya dönüştürmek için izlememiz gereken 
+adımları temsil eder. İşte algoritmalar, hesaplamalar, karar mekanizmaları ve programın 
+çalışmasını sağlayan talimatlar tam olarak bu bölümde yer alır. 
+
+Örneğin, elimizde karışık sırada bulunan bir sayı listesi olduğunu düşünelim. 
+Amacımız bu sayıları küçükten büyüğe doğru sıralamak olsun.
+
+- Girdimiz, sıralanmamış sayı listesi.
+- İşlemimiz, sayıları küçükten büyüğe sıralamak için uyguladığımız algoritma.
+- Çıktımız ise küçükten büyüğe doğru sıralanmış sayı listesi.
+
+İşte bilgisayar bilimi, özellikle bu işlem bölümünün nasıl tasarlanması gerektiğini 
+anlamamıza yardımcı olur. Çünkü önemli olan yalnızca bir sonuca ulaşmak değil, 
+o sonuca doğru, anlaşılır ve verimli bir yöntemle ulaşabilmektir.
+
+Kısacası bilgisayar biliminin temelinde problem çözmek vardır. Önce problemi anlarız, 
+elimizdeki bilgileri belirleriz, bu bilgileri nasıl işleyeceğimizi tasarlarız ve sonunda 
+istediğimiz sonucu elde ederiz. Programlama ise tasarladığımız bu çözümü bilgisayara 
+uygulamanın yollarından biridir.
