@@ -1,0 +1,132 @@
+========================================
+Lecture 3 — Binary Notation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Tekli Sayı Sistemi'nde her yeni sembol yalnızca bir değer daha ekliyordu. 
+Peki, her sembolün bulunduğu konuma göre farklı bir değeri temsil ettiği 
+bir sistem kullansaydık nasıl olurdu?
+
+İşte bu yöntem sayesinde çok daha az sembol kullanarak çok daha büyük 
+sayıları temsil edebiliriz. Bunu yapmamızı sağlayan sistemlerden biri 
+de İkili Sayı Sistemi (Binary) olarak adlandırılır. 
+
+İkili Sayı Sistemi yalnızca iki rakam kullanır: 0 ve 1.
+
+Ancak bu iki rakamı farklı konumlarda bir araya getirerek çok sayıda
+sayıyı ve hatta farklı türde bilgileri temsil edebiliriz.
+
+# SAYMAKTAN DESENLERE (FROM COUNTING TO PATTERNS)
+
+Hatırlarsanız Tekli Sayı Sistemi'nde önemli olan kaç parmağımızı kaldırdığımızdı.
+
+Ancak İkili Sayı Sistemi bize farklı bir yaklaşım sunuyor. Bu kez yalnızca kaldırdığımız 
+parmakların sayısına bakmak yerine, her parmağa ayrı bir konum ve anlam verebiliriz.
+
+Her parmağımızın iki farklı durumda bulunabildiğini varsayalım:
+
+- 0: Parmak kapalı.
+- 1: Parmak açık.
+
+O halde üç parmağımızla kaç farklı kombinasyon oluşturabiliriz?
+
+Her parmağın iki olası durumu olduğuna göre: 2 * 2 * 2 = 8
+Bunu daha kısa bir şekilde şöyle de yazabiliriz: 2^3 = 8
+
+- 000 -> 0
+- 001 -> 1
+- 010 -> 2
+- 011 -> 3
+- 100 -> 4
+- 101 -> 5
+- 110 -> 6
+- 111 -> 7
+
+İşte İkili Sayı Sistemi'nin en önemli avantajlarından biri de budur. 
+Her konuma farklı bir anlam vererek çok daha az sembolle daha fazla 
+bilgiyi temsil edebiliriz.
+
+# BİT NEDİR? (BITS)
+
+İkili Sayı Sistemi'ndeki her bir rakama Bit adı verilir. Aslında Bit 
+kelimesi, İngilizcedeki Binary Digit ifadesinden gelir.
+
+Bir Bit yalnızca iki farklı değer alabilir: 0 veya 1.
+
+- 1 Bit ile 2 farklı kombinasyon,
+- 2 Bit ile 4 farklı kombinasyon,
+- 3 Bit ile 8 farklı kombinasyon,
+- 4 Bit ile 16 farklı kombinasyon,
+- 5 Bit ile 32 farklı kombinasyon oluşturabiliriz.
+
+Buradan genel bir kural çıkarabiliriz: n Bit = 2^n farklı kombinasyon.
+Negatif olmayan tam sayılar için ise formülümüz: 2^n - 1.
+
+- 2 Bit ile 4 farklı kombinasyon ve temsil edilecek sayılar: 0-3.
+- 4 Bit ile 16 farklı kombinasyon ve temsil edilecek sayılar: 0-15.
+- 8 Bit ile 256 farklı kombinasyon ve temsil edilecek sayılar: 0-255.
+
+Ancak, hala cevaplamamız gereken bir soru var:
+Örneğin, "101" kombinasyonu, neden 5 sayısını temsil ediyor?
+
+# İKİLİ SAYILARI OKUMAK (READING BINARY NUMBERS)
+
+Günlük hayatımızda kullandığımız sayı sistemi, Onluk Sayı Sistemi (Decimal) 
+olarak adlandırılır. Bu sistemde her rakamın bulunduğu konuma göre farklı 
+bir değeri vardır ve bu değerler 10'un kuvvetlerine dayanır.
+
+Örneğin, 347 sayısını ele alalım:
+
+- 3 rakamı yüzler basamağındadır.
+- 4 rakamı onlar basamağındadır.
+- 7 rakamı birler basamağındadır.
+
+Yani, 347 sayısını aslında şu şekilde ifade edebiliriz: (3 * 100) + (4 * 10) + (7 * 1)
+
+İkili Sayı Sistemi de benzer bir mantıkla çalışır. Ancak burada 
+önemli bir fark var: Onluk sistemde 10'un kuvvetlerini kullanırken, 
+ikili sistemde 2'nin kuvvetlerini kullanırız.
+
+# İKİLİ SİSTEMDE BASAMAK DEĞERLERİ (BINARY PLACE VALUES)
+
+Şimdi `101` sayısını ele alalım. İkili Sayı Sistemi'nde basamakların 
+değerlerini sağdan sola doğru hesaplarız.
+
+1   0   1
+2²  2¹  2⁰
+
+Şimdi her rakamı kendi basamak değeriyle çarpalım: (1 * 4) + (0 * 2) + (1 * 1)
+Bu işlemi yaptığımızda: 4+0+1=5 Sonucunu elde ediyoruz.
+
+# BİLGİSAYARLAR NEDEN İKİLİ SAYI SİSTEMİNİ KULLANIR? (WHY COMPUTERS USE BINARY)
+
+Aslında bunun sebebi, ikili sistemin insanlar için daha kolay olması değil. 
+Tam tersine, bu sistemin elektronik donanımlarla son derece uyumlu olmasıdır.
+
+Bunu anlamak için basit bir ampul düşünelim.
+
+Bir ampulün iki temel durumu vardır: (0 - Kapalı) / (1 - Açık)
+
+Eğer ampul kapalıysa 0, açıksa 1 olarak temsil edebiliriz. Böylece yalnızca 
+iki fiziksel durumu kullanarak ikili sistemdeki rakamları ifade etmiş oluruz. 
+
+Bilgisayarların içerisindeki elektronik devreler de benzer bir mantıkla çalışır.
+Ancak bilgisayarlar bunun için ampul kullanmaz. Bunun yerine elektrik sinyallerinden 
+yararlanırlar. Örneğin, düşük voltaj seviyesi 0'ı, daha yüksek bir voltaj seviyesi 
+ise 1'i temsil edebilir. Bu sayede bilgisayarlar elektriksel durumları kullanarak 
+ikili bilgileri saklayabilir ve işleyebilir.
+
+# İKİLİ SAYI SİSTEMİ SADECE BİR BAŞLANGIÇ (BINARY IS ONLY THE BEGINNING)
+
+Şu ana kadar İkili Sayı Sistemi'ni ağırlıklı olarak sayıları temsil etmek 
+için kullandık. Ancak bildiğiniz gibi bilgisayarlar yalnızca sayılarla çalışmıyor.
+
+Bilgisayarlarımızda metinler yazabiliyor, fotoğraflar görüntüleyebiliyor, 
+müzik dinleyebiliyor ve videolar izleyebiliyoruz.
+
+İşte burada anlamamız gereken çok önemli bir nokta var: Bilgisayarların 
+işlediği tüm bu bilgiler, eninde sonunda Bit'ler kullanılarak temsil edilir.
+
+Yani harfler, renkler, sesler, görüntüler ve diğer bütün dijital bilgiler, 
+belirli kurallara göre yorumlanan sıfır ve birlerden oluşur.
