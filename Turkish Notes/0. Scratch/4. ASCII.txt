@@ -1,0 +1,103 @@
+========================================
+Lecture 4 — ASCII
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Şu ana kadar bilgisayarların sayıları temsil etmek için 
+İkili Sayı Sistemi'ni (Binary) nasıl kullandığını öğrendik.
+
+Ancak bilgisayarlar yalnızca sayılarla çalışmıyor. Aynı 
+zamanda farklı türde bilgileri de temsil edebilmeleri gerekiyor.
+
+Örneğin:
+
+- Harfler,
+- Karakter olarak yazılan rakamlar,
+- Noktalama işaretleri,
+- Semboller,
+- Boşluklar ve diğer özel karakterler.
+
+İşte bunun için karakterleri sayılarla temsil edebileceğimiz 
+bir sisteme ihtiyacımız var.Bu probleme geliştirilen ilk standart 
+çözümlerden biri de ASCII olarak adlandırılıyor.
+
+# ASCII NEDİR? (WHAT IS ASCII?)
+
+ASCII, bir karakter kodlama sistemidir. En basit hâliyle, karakterlerle 
+sayılar arasında bir eşleştirme yapılmasını sağlayan sistemdir.
+
+Örneğin ASCII standardında büyük harflere belirli sayısal değerler atanmıştır:
+
+A -> 65
+B -> 66
+C -> 67
+
+Küçük harflerin ise kendilerine ait farklı değerleri vardır:
+
+a -> 97
+b -> 98
+c -> 99
+
+Aynı şekilde rakamların karakter olarak yazılmış hâllerinin de ASCII karşılıkları bulunur:
+
+0 -> 48
+1 -> 49
+2 -> 50
+
+Burada önemli bir ayrıntıya dikkat edelim: 
+Sayı olarak `1` ile karakter olarak `'1'` aynı şey değildir.
+
+- Birincisi sayısal bir değeri ifade ederken, 
+- ikincisi ekranda gördüğümüz `1` karakteridir. 
+
+Elbette ASCII yalnızca harfleri ve rakamları temsil etmez. Boşluk ve 
+noktalama işaretleri gibi karakterlerin de sayısal karşılıkları vardır.
+
+Space -> 32
+!     -> 33
+?     -> 63
+
+İşte burada anlamamız gereken çok önemli bir nokta var: Bilgisayar, `A` 
+harfini doğrudan bir harf olarak saklamaz. Bunun yerine o harfi temsil 
+eden sayısal değeri saklar. Bu sayısal değer de bilgisayarın 
+anlayabileceği ikili biçimde temsil edilebilir.
+
+# KARAKTERLERDEN İKİLİ SAYI SİSTEMİNE (FROM CHARACTERS TO BINARY)
+
+Şimdi büyük `A` harfini ele alalım: A
+ASCII standardında `A` harfinin karşılığı: 65
+İkili Sayı Sistemdeki karşılığı: 1000001
+
+Yani: Karakter -> Sayı -> Binary
+
+Bilgisayar, bu değeri Bit'lerden oluşan bir desen olarak saklar. 
+Yazılım ise bu deseni ASCII standardına göre yorumladığında onun 
+`A` harfini temsil ettiğini anlar.
+
+Ancak burada bilgisayar bilimi açısından çok önemli bir fikirle karşılaşıyoruz:
+
+Bit'lerin tek başlarına belirli bir anlamı yoktur. Bir Bit dizisinin neyi temsil 
+ettiği, onu nasıl yorumladığımıza bağlıdır.
+
+# ASCII'NİN SINIRLAMALARI (LIMITATIONS OF ASCII)
+
+ASCII, bilgisayarların metinleri temsil edebilmesi açısından oldukça 
+önemli bir standarttı. Ancak bu sistemin de bazı sınırlamaları bulunuyor.
+
+Standart ASCII, 7 Bit kullanır. Dolayısıyla toplamda: 2^7 = 128
+
+Yani ASCII standardında yalnızca 128 farklı karakter ve kontrol kodu için yer vardır.
+Bu sayı temel İngilizce metinleri temsil etmek için yeterli olsa da dünyadaki bütün 
+dilleri ve sembolleri kapsamak için oldukça sınırlıdır. Örneğin standart ASCII ile 
+doğrudan temsil edemediğimiz karakterler arasında şunlar bulunur:
+
+- Çince karakterler,
+- Arapça harfler,
+- Türkçeye özgü `ğ`, `ş`, `ı` gibi harfler,
+- Emojiler,
+- Diğer birçok alfabe ve sembol.
+
+İşte bu nedenle çok daha fazla karakteri destekleyebilen, farklı dillerin ve sembollerin 
+bir arada kullanılmasına imkân tanıyan daha kapsamlı bir sisteme ihtiyaç duyuldu ve bu 
+ihtiyaç bizi Unicode adı verilen modern karakter standardına götürüyor.
