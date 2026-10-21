@@ -1,0 +1,80 @@
+========================================
+Lecture 5 — Unicode
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+ASCII sayesinde bilgisayarların metinleri sayılarla temsil 
+edebilmesini sağlayan standart bir sistem geliştirilmişti.
+
+Örneğin ASCII standardında:
+
+- `A` harfi 65,
+- `B` harfi 66,
+- `a` harfi ise 97 sayısıyla temsil ediliyordu.
+
+Bu sistem temel İngilizce metinler için oldukça iyi çalışıyordu. 
+Ancak ortada önemli bir problem vardı. Dünyada ASCII'nin temsil 
+edebileceğinden çok daha fazla karakter bulunuyordu.
+
+Örneğin:
+
+- Aksanlı harfler,
+- Farklı alfabeler,
+- Farklı yazı sistemleri,
+- Binlerce özel sembol,
+- Matematiksel işaretler,
+- Para birimi sembolleri,
+- Emojiler ve daha birçok karakter.
+
+Standart ASCII yalnızca 128 farklı değeri temsil edebildiği için 
+bütün bu karakterleri kapsaması mümkün değildi. İşte bu sınırlamayı 
+ortadan kaldırmak için çok daha kapsamlı bir standarda ihtiyaç duyuldu.
+
+# UNICODE NEDİR? (WHAT IS UNICODE?)
+
+Unicode, dünyanın farklı dillerinde kullanılan karakterleri ortak bir 
+sistem içerisinde temsil etmeyi amaçlayan evrensel bir karakter standardıdır.
+
+En basit hâliyle, farklı yazı sistemlerinde kullanılan karakterlere benzersiz 
+sayısal değerler atıyor. Böylece dünyanın herhangi bir yerinde kullanılan bir 
+karakter, farklı bilgisayarlar ve yazılımlar tarafından aynı standart üzerinden 
+tanınabiliyor. Örneğin Unicode şu karakterleri kapsar:
+
+- Latin alfabesindeki harfler,
+- Arap alfabesindeki harfler,
+- Çince karakterler,
+- Türkçeye özgü harfler,
+- Emojiler,
+- Ve çok daha fazlası.
+
+Aslında Unicode'un temel mantığı ASCII'ye oldukça benziyor: Karakter → Sayı
+
+Ancak aralarındaki en önemli fark, Unicode'un ASCII'ye kıyasla 
+çok daha geniş bir karakter kümesini desteklemesidir.
+
+# KOD NOKTALARI (CODE POINTS)
+
+Unicode standardında karakterlere atanan sayısal değerlere Code Point adı verilir.
+Yani bir karakterin Unicode içerisindeki sayısal kimliği olarak düşünebiliriz.
+
+- A -> `U+0041`
+- B -> `U+0042`
+- a -> `U+0061`
+- ş -> `U+015F`
+- € -> `U+20AC`
+
+Peki, bu değerlerin başındaki `U+` ne anlama geliyor?
+
+Aslında `U+` ifadesi, ardından gelen değerin bir Unicode kod 
+noktası olduğunu belirtir. Bu değerler onaltılık sayı sistemi 
+(Hexadecimal) kullanılarak yazılır.
+
+Örneğin `A` harfinin Unicode karşılığı `U+0041` şeklindedir.
+
+Buradaki `0041`, onaltılık sistemde yazılmış bir sayıdır ve 
+onluk sayı sisteminde 65'e karşılık gelir.
+
+Unicode tasarlanırken ASCII'deki karakterlerin mevcut sayısal 
+değerleri özellikle korunmuştur. Böylece ASCII'de bulunan karakterler 
+Unicode içerisinde de aynı sayısal değerlere sahip olmaya devam etmiştir.
