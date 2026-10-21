@@ -1,0 +1,125 @@
+========================================
+Lecture 7 — Representation
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Şu ana kadar bilgisayarların farklı türde bilgileri 0 ve 1'lerden 
+oluşan kombinasyonlarla nasıl temsil edebildiğini öğrendik.
+
+Önceki derslerimizde Bit'leri kullanarak:
+
+- Sayıları,
+- Karakterleri,
+- Renkleri,
+- Görüntüleri nasıl temsil edebileceğimizi gördük.
+
+Ancak burada unutmamamız gereken çok önemli bir nokta var: Bit'lerin tek başlarına 
+belirli bir anlamı yoktur. Yani sıfırlardan ve birlerden oluşan bir dizinin ne anlama 
+geldiğini, yalnızca o diziye bakarak her zaman anlayamayız.
+
+Aynı Bit dizisi, yazılımın onu nasıl yorumladığına bağlı olarak:
+
+- Bir sayıyı,
+- Bir harfi,
+- Bir rengi,
+- Bir sesi,
+- Bir videonun parçasını,
+- Veya tamamen farklı bir bilgiyi temsil edebilir.
+
+# KARMAŞIK BİLGİLERİN OLUŞTURULMASI (BUILDING COMPLEX INFORMATION)
+
+Aslında bilgisayarların bilgiyi temsil etme şeklini birbiri üzerine kurulan 
+katmanlar olarak düşünebiliriz. Hatırlarsanız her şey Bit'lerle başlamıştı.
+
+- Daha sonra bu Bit'leri kullanarak sayıları temsil etmeyi öğrendik. 
+- Sayılar sayesinde harfleri ve renkleri
+- Renkleri bir araya getirerek görüntüleri 
+- Görüntüleri art arda göstererek de videolar oluşturabiliriz.
+
+Elbette bu, dijital bilgiyi anlamak için basitleştirilmiş bir modeldir. 
+
+Örneğin sesleri temsil etmek için görüntülere ihtiyacımız yoktur; 
+sesler de doğrudan sayısal verilerle ifade edilebilir.
+
+Ancak buradaki temel fikir değişmiyor: Bilgisayarların işlediği bütün dijital 
+bilgiler, eninde sonunda sıfırlar ve birlerle temsil edilir.
+
+# VİDEOLAR NASIL TEMSİL EDİLİR? (REPRESENTING VIDEO)
+
+Bunu anlamak için bir Flip Book, yani sayfaları hızlıca çevrildiğinde hareketli 
+görüntü etkisi oluşturan küçük bir resimli kitap düşünelim. Bu kitapların her 
+sayfasında birbirinden biraz farklı bir resim bulunur.
+
+Sayfalara tek tek ve yavaşça baktığımızda her birinin ayrı bir görüntü olduğunu 
+kolayca fark ederiz. Ancak sayfaları yeterince hızlı çevirdiğimizde resimler 
+hareket ediyormuş gibi görünmeye başlar. 
+
+İşte dijital videolar da benzer bir mantıkla çalışır. Bir videoyu, art arda ve 
+hızlı bir şekilde gösterilen çok sayıda görüntünün oluşturduğu bir dizi olarak 
+düşünebiliriz. Bu görüntülerin her birine Frame (Kare) adı verilir.
+
+Örneğin videolarda saniyede:
+
+- 24 kare(frame),
+- 30 kare(frame),
+- 60 kare(frame),
+- veya farklı sayıda kare gösterilebilir.
+
+Peki, saniyede 30 kare ne anlama geliyor?
+
+Bu, bir saniye içerisinde yaklaşık 30 farklı görüntünün art arda gösterilmesi demektir.
+Bu görüntüler arasında küçük değişiklikler olduğu için beynimiz bunları birbirinden 
+bağımsız fotoğraflar olarak değil, sürekli bir hareket olarak algılar.
+
+Bu değere FPS (Frames Per Second), yani saniyedeki kare sayısı denir.
+
+Böylece bilgisayarlar aslında tek tek görüntülerden oluşan bir diziyi kullanarak 
+hareketli videoları temsil edebilir.
+
+# SESLER NASIL TEMSİL EDİLİR? (REPRESENTING SOUND)
+
+Aslında sesin ölçülebilen fiziksel özellikleri vardır:
+
+- Frequency (Frekans): Sesin ne kadar tiz veya pes algılandığıyla yakından ilişkilidir.
+- Duration (Süre): Sesin ne kadar sürdüğünü belirtir.
+- Amplitude (Genlik): Ses dalgasının büyüklüğünü ifade eder ve sesin yüksekliğiyle ilişkilidir.
+
+Bu özellikleri sayısal olarak ifade edebildiğimiz için bilgisayarlar da 
+seslerle çalışabilir. Örneğin bir ses kaydedildiğinde, ses dalgası belirli 
+aralıklarla ölçülerek sayısal verilere dönüştürülebilir. 
+
+Bu işleme Sampling (Örnekleme) adı verilir.
+
+Bilgisayar, elde ettiği bu sayısal verileri kullanarak sesi saklayabilir, 
+işleyebilir ve daha sonra yeniden çalabilir. Yani dinlediğimiz müzikler, 
+ses kayıtları ve diğer dijital sesler de temelinde sayısal bilgilerden oluşur.
+
+# MÜZİĞİN SAYILARLA TEMSİL EDİLMESİ (MUSIC AS NUMBERS)
+
+Şimdi müzik notalarını belirli sayılarla temsil edebildiğimizi düşünelim.
+
+Örneğin her nota için üç farklı sayı kullanalım:
+
+- Birinci sayı: Sesin perdesini (Pitch),
+- İkinci sayı: Sesin süresini (Duration),
+- Üçüncü sayı: Sesin şiddetini (Loudness) temsil etsin.
+
+Bu durumda müzik notalarını şöyle ifade edebiliriz:
+
+- Nota 1: (60, 100, 80)
+- Nota 2: (64, 100, 70)
+- Nota 3: (67, 200, 90)
+
+Ancak burada dikkat etmemiz gereken önemli bir nokta var. Bu sayıların 
+tam olarak ne anlama geldiği, kullandığımız veri formatına bağlıdır.
+
+Aslında bu örnek, bilgisayar biliminin en temel fikirlerinden birini 
+bir kez daha gösteriyor: Bilgisayarlar için önemli olan yalnızca verinin 
+kendisi değil, o verinin nasıl yorumlanacağıdır.
+
+Sonuç olarak metinler, sayılar, renkler, görüntüler, videolar ve sesler 
+birbirinden çok farklı bilgiler gibi görünse de bilgisayarlar açısından 
+hepsi belirli kurallara göre temsil edilen sayısal verilerdir.
+
+Ve bütün bu verilerin temelinde yine aynı iki rakam bulunur: 0 ve 1.
