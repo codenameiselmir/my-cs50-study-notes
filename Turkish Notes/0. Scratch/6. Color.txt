@@ -1,0 +1,126 @@
+========================================
+Lecture 6 — Color
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Bilgisayarlar renkleri bizim gördüğümüz veya algıladığımız 
+şekilde anlamaz. Örneğin biz bir nesneye baktığımızda onun 
+kırmızı, mavi veya yeşil olduğunu kolayca anlayabiliriz. 
+
+Ancak bilgisayarların renkleri temsil edebilmesi için sayısal 
+bir sisteme ihtiyacı vardır.
+
+İşte bu amaçla kullanılan en yaygın sistemlerden biri RGB 
+olarak adlandırılır.
+
+# RGB NEDİR?
+
+RGB, İngilizcedeki Red, Green, Blue kelimelerinin baş harflerinden oluşur.
+
+- R (Red): Kırmızı
+- G (Green): Yeşil
+- B (Blue): Mavi
+
+RGB sisteminin temel mantığı, bu üç rengin farklı miktarlarda bir 
+araya getirilmesiyle çok sayıda farklı renk oluşturabilmemizdir.
+
+Örneğin elimizde şu üç sayı olduğunu düşünelim: (72, 73, 33)
+
+RGB sisteminde bu sayılar sırasıyla şu değerleri temsil eder:
+
+- Kırmızı: 72
+- Yeşil: 73
+- Mavi: 33
+
+Bu üç değer bir araya getirildiğinde koyu sarıya veya zeytin 
+yeşiline benzeyen bir renk ortaya çıkar. 
+
+# AYNI BİT'LER FARKLI ANLAMLARA GELEBİLİR (THE SAME BITS CAN MEAN DIFFERENT THINGS)
+
+Şimdi önceki örneğimizde kullandığımız üç sayıya yeniden bakalım: (72, 73, 33)
+
+Bu sayıları ASCII standardına göre yorumladığımızda:
+
+- 72 → H
+- 73 → I
+- 33 → !
+
+Sonucunda `HI!` metnini elde ederiz.
+
+Ancak aynı sayıları RGB sistemine göre yorumladığımızda:
+
+- Kırmızı → 72
+- Yeşil → 73
+- Mavi → 33
+
+Bu kez ortaya bir renk çıkar.
+
+Dikkat ederseniz kullandığımız sayılar tamamen aynı. Ancak onları 
+yorumlama şeklimiz değiştiğinde ortaya çıkan sonuç da değişiyor.
+
+Yani, Bit'lerin tek başlarına belirli bir anlamı yoktur. Anlam, 
+onları nasıl yorumladığımıza bağlıdır. Aynı Bit dizisi, bulunduğu 
+bağlama göre bir metni, sayıyı, rengi, görüntünün bir parçasını 
+veya başka bir bilgiyi temsil edebilir.
+
+# PİKSEL NEDİR? (PIXELS)
+
+Dijital görüntüler, Pixel (Piksel) adı verilen çok küçük noktalardan oluşur.
+
+Bir fotoğrafı yeterince büyüttüğümüzde onu oluşturan küçük kareleri görebiliriz.
+İşte bu küçük karelerin her biri bir pikseldir. Her pikselin kendine ait bir renk 
+bilgisi bulunur.
+
+- Bir pikselin rengi `(255, 255, 0)` olabilir.
+- Başka bir pikselin rengi `(100, 50, 25)` olabilir.
+
+Bilgisayar, farklı renklere sahip bu pikselleri yan yana yerleştirerek 
+bir görüntü oluşturur. Bir görüntüde ne kadar fazla piksel varsa, o kadar 
+fazla ayrı renk bilgisini temsil etmek mümkün olur.
+
+# PİKSELLER VE BELLEK (PIXELS AND MEMORY)
+
+Standart RGB sisteminde her renk kanalı 8 Bit kullanıyordu. Üç renk kanalımız 
+olduğuna göre: 8+8+8=24 Bit.
+
+8 Bit'in 1 Byte olduğunu bildiğimiz için, standart 24 Bit RGB biçiminde 
+bir pikselin renk bilgisi 3 Byte yer kaplar.
+
+Peki, bir görüntünün 1.000.000 pikselden oluştuğunu düşünürsek ne olur?
+
+Her piksel 3 Byte yer kapladığına göre: 1.000.000 * 3 = 3.000.000 Byte
+
+Bu da yaklaşık olarak 3 MB anlamına gelir. Üstelik burada yalnızca ham 
+piksel verisini hesaplıyoruz. Dosya başlıkları veya diğer ek bilgiler 
+bu hesaba dahil değil.
+
+Gerçek hayatta JPEG ve PNG gibi görüntü formatları, dosya boyutunu azaltmak 
+için farklı sıkıştırma yöntemleri kullanabilir. Bu nedenle aynı çözünürlüğe 
+sahip iki görüntünün dosya boyutları birbirinden farklı olabilir.
+
+Ancak temel mantık değişmez: Bir görüntüde daha fazla piksel bulunması, 
+genellikle daha fazla renk bilgisinin saklanması gerektiği anlamına gelir.
+
+# GÖRÜNTÜ BOYUTLARI (IMAGE DIMENSIONS)
+
+Dijital görüntülerin bir genişliği (Width) ve bir yüksekliği (Height) vardır.
+Bu boyutlar, görüntünün yatayda ve dikeyde kaç pikselden oluştuğunu belirtir.
+
+Örneğin bir görüntünün çözünürlüğünün `1920 × 1080` olduğunu düşünelim.
+
+- Width (Genişlik): 1920 piksel
+- Height (Yükseklik): 1080 piksel
+
+Peki, bu görüntü toplam kaç pikselden oluşuyor?
+
+Genişlik ile yüksekliği çarpmamız yeterli: Toplam Piksel = Genişlik * Yükseklik
+
+Örneğimizde: 1920 * 1080 = 2.073.600
+
+Yani 1920 × 1080 çözünürlüğündeki bir görüntü toplam 2.073.600 pikselden oluşur.
+
+Yani bilgisayarlar görüntüleri de sayısal veriler olarak temsil eder. Her pikselin 
+rengi sayılarla ifade edilir ve bu sayılar bilgisayarın belleğinde Bit'ler kullanılarak 
+saklanır. Böylece başlangıçta yalnızca 0 ve 1'lerden oluşan bilgiler, bir araya gelerek 
+milyonlarca renkten oluşan dijital görüntülere dönüşebilir.
