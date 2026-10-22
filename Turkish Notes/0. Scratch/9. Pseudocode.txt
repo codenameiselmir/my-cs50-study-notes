@@ -1,0 +1,101 @@
+========================================
+Lecture 9 — Pseudocode
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Önceki dersimizde algoritmanın, bir problemi çözmek için izlediğimiz 
+adım adım işlemler bütünü olduğunu öğrenmiştik. Örneğin alfabetik 
+olarak sıralanmış bir telefon rehberinde aradığımız kişiyi bulmak 
+için her seferinde arama alanını ikiye böldüğümüz bir algoritma 
+geliştirmiştik. Ancak bir algoritmanın nasıl çalıştığını anladıktan 
+sonra karşımıza başka bir soru çıkıyor:
+
+Peki, bu algoritmayı gerçek bir programlama diliyle kodlamadan önce 
+nasıl açık ve anlaşılır bir şekilde ifade edebiliriz?
+
+İşte bu noktada Pseudocode (Sözde Kod) kavramıyla karşılaşıyoruz.
+
+# PSEUDOCODE NEDİR? (WHAT IS PSEUDOCODE?)
+
+Algoritmalar, bir problemi çözmek için hangi adımları izlememiz 
+gerektiğini tanımlar. Pseudocode ise bu adımları gerçek kod yazmaya 
+başlamadan önce, insanların kolayca anlayabileceği bir biçimde ifade 
+etmemizi sağlar.
+
+Aslında Pseudocode, programlama koduna benzeyen ancak belirli bir 
+programlama diline ait olmayan bir anlatım yöntemidir. Örneğin bir 
+algoritmayı Pseudocode kullanarak ifade ederken:
+
+- C,
+- C++,
+- Java,
+- Python,
+- JavaScript
+
+gibi programlama dillerinin sözdizimi (Syntax) kurallarına uymak zorunda değiliz.
+
+Bunun yerine, programımızın ne yapması gerektiğine odaklanabiliriz. Yani henüz 
+kodun nasıl yazılacağını düşünmeden, çözümün mantığını ve izlenmesi gereken 
+adımları belirleyebiliriz.
+
+# PSEUDOCODE GERÇEK BİR PROGRAMLAMA KODU DEĞİLDİR (PSEUDOCODE IS NOT REAL CODE)
+
+Pseudocode, bilgisayarın doğrudan çalıştırabileceği gerçek 
+bir programlama kodu değildir. Örneğin telefon rehberimizde 
+bir kişiyi bulmak için şu adımları yazdığımızı düşünelim:
+
+Find the middle of the phone book
+Check the name
+If the person is there
+Call the person
+
+Bu talimatları okuduğumuzda ne yapmamız gerektiğini kolayca anlayabiliriz.
+Ancak bilgisayar, bu şekilde yazılmış ifadeleri kendiliğinden yorumlayıp çalıştıramaz.
+Çünkü bu talimatlar herhangi bir programlama dilinin kesin sözdizimi kurallarına göre 
+yazılmamıştır. Algoritmamızın bilgisayar tarafından çalıştırılabilmesi için bu adımları 
+daha sonra gerçek bir programlama diliyle kodlamamız gerekir.
+
+Dolayısıyla Pseudocode yazmamızın temel amacı kodu çalıştırmak değildir. Asıl amacımız, 
+çözmek istediğimiz problemin mantığını daha açık ve anlaşılır hâle getirmektir.
+
+# ALGORİTMADAN PSEUDOCODE'A (FROM ALGORITHM TO PSEUDOCODE)
+
+Şimdi önceki dersimizde incelediğimiz telefon rehberi problemine 
+geri dönelim. Hatırlarsanız amacımız, alfabetik olarak sıralanmış 
+bir telefon rehberinde John Harvard isimli kişiyi bulmaktı.
+
+Bunun için Binary Search (İkili Arama) yaklaşımını kullanıyorduk:
+
+1. Telefon rehberini yaklaşık olarak ortasından aç.
+2. Bulunduğun sayfadaki isimleri kontrol et.
+3. John Harvard bu sayfadaysa onu ara.
+4. John Harvard alfabetik olarak daha önce geliyorsa rehberin sol yarısında aramaya devam et.
+5. John Harvard alfabetik olarak daha sonra geliyorsa rehberin sağ yarısında aramaya devam et.
+6. Aradığın kişiyi bulana kadar aynı işlemleri tekrarla.
+7. Kontrol edilecek sayfa kalmadıysa aramayı sonlandır.
+
+Peki, bu algoritmayı Pseudocode kullanarak nasıl ifade edebiliriz?
+
+Pick up phone book
+Open to middle of phone book
+Look at page
+
+If John Harvard is on page
+Call John Harvard
+Else if John Harvard is earlier in phone book
+Open to middle of left half of phone book
+Go back to "Look at page"
+Else if John Harvard is later in phone book
+Open to middle of right half of phone book
+Go back to "Look at page"
+Else
+Quit
+
+Bu anlatım, doğal dilde yazılmış basit talimatlardan daha düzenli 
+olduğu için gerçek bir programın yapısına da oldukça benziyor.
+
+Kısacası Pseudocode, bir algoritmanın mantığı ile gerçek programlama kodu 
+arasında köprü görevi görür. Problemi nasıl çözeceğimizi önceden planlamamızı, 
+çözümümüzdeki eksiklikleri fark etmemizi ve daha sonra bu çözümü istediğimiz 
+programlama diline aktarmamızı kolaylaştırır.
