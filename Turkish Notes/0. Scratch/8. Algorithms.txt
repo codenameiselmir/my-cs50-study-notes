@@ -1,0 +1,206 @@
+========================================
+Lecture 8 — Algorithms
+Repository: my-cs50-study-notes
+Directory: 0. Scratch
+========================================
+
+Şu ana kadar bilgisayarların farklı türde bilgileri nasıl temsil edebildiğini öğrendik.
+
+Örneğin bilgisayarlar:
+
+- Metinleri,
+- Sayıları,
+- Görüntüleri,
+- Sesleri,
+- Videoları,
+- Ve daha birçok veri türünü temsil edebilir.
+
+Ancak bilgiyi temsil edebilmek yalnızca başlangıçtır. Çünkü elimizde belirli veriler 
+olduğunda cevaplamamız gereken çok önemli bir soru daha var:
+
+Peki, elimizdeki bu verileri kullanarak bir problemi nasıl çözeceğiz?
+
+# ALGORİTMA NEDİR? (WHAT IS AN ALGORITHM?)
+
+Algoritma, bir problemi çözmek için izlediğimiz adım adım işlemler bütünüdür.
+
+- Input (Girdi): Başlangıçta elimizde bulunan bilgiler.
+- Process (İşlem): Bu bilgileri kullanarak gerçekleştirdiğimiz işlemler.
+- Output (Çıktı): İşlemler sonucunda elde etmek istediğimiz sonuç.
+
+İşte algoritma, tam olarak bu modelin ortasındaki Process bölümünde 
+neler yapılacağını tanımlar. Yani algoritma, belirli girdileri alır, 
+bunlar üzerinde önceden belirlenmiş adımları uygular ve istediğimiz 
+sonucu üretir.
+
+# ALGORİTMALAR YAZILIMIN HER YERİNDEDİR (ALGORITHMS ARE EVERYWHERE IN SOFTWARE)
+
+Aslında algoritmalar günlük hayatımızda kullandığımız neredeyse 
+bütün yazılımların içerisinde bulunur:
+
+- Akıllı telefonlarda,
+- Dizüstü bilgisayarlarda,
+- Masaüstü bilgisayarlarda,
+- Web sitelerinde,
+- Mobil uygulamalarda,
+- İşletim sistemlerinde.
+
+Kısacası kullandığımız yazılımların arka planında birçok farklı 
+algoritma çalışır. Hatta yazılımları, algoritmaların programlama 
+dilleri kullanılarak hayata geçirilmiş hâli olarak düşünebiliriz.
+
+Peki, algoritma ile kod arasındaki fark nedir?
+
+Algoritma, bir problemin nasıl çözüleceğini tanımlar. 
+Kod ise bu çözümü bilgisayarın çalıştırabileceği bir programlama diliyle ifade eder.
+
+Örneğin aynı algoritmayı farklı programlama dilleri kullanarak geliştirebiliriz:
+
+- C++,
+- Java,
+- Python,
+- JavaScript,
+- Veya başka bir programlama dili.
+
+Hangi dili seçersek seçelim, temel mantık değişmez. Sonuçta bilgisayara, 
+bir problemi çözebilmesi için hangi işlemleri hangi sırayla gerçekleştirmesi 
+gerektiğini söylüyoruz.
+
+# ALGORİTMALAR VE PROGRAMLAMA DİLLERİ (ALGORITHMS AND PROGRAMMING LANGUAGES)
+
+Bilgisayar bilimi öğrenmek, mümkün olduğunca fazla programlama dili öğrenmek 
+anlamına gelmez. Çünkü farklı programlama dilleri, farklı problemleri çözmek 
+için çeşitli avantajlar sunabilir.
+
+- Belirli bir problemi ifade etmeyi kolaylaştırabilir.
+- Yapmak istediğimiz işlem için daha uygun araçlar sunabilir.
+- Yazmamız gereken kod miktarını azaltabilir.
+- Yazılım geliştirme sürecini hızlandırabilir.
+- Geliştirdiğimiz çözümün bakımını ve güncellenmesini kolaylaştırabilir.
+
+Bu nedenle birden fazla programlama dili öğrenmek elbette faydalıdır. Ancak 
+buradaki asıl amaç bildiğimiz programlama dili sayısını artırmak değildir.
+
+Önemli olan, farklı problemleri çözebilmek için elimizde farklı araçların bulunmasıdır.
+İyi bir yazılımcıyı yalnızca bildiği programlama dilleri değil, karşılaştığı problemi 
+ne kadar iyi anladığı ve o problemi çözmek için ne kadar doğru bir yöntem seçtiği belirler.
+
+# TELEFON REHBERİNDE BİR KİŞİYİ ARAMAK (SEARCHING FOR A CONTACT)
+
+Şimdi algoritmaların nasıl çalıştığını daha iyi anlamak için günlük 
+hayatımızdan basit bir örnek düşünelim.
+
+Telefon rehberimizde:
+
+- 10 kişi,
+- 100 kişi,
+- 1.000 kişi,
+- Veya çok daha fazla kişi kayıtlı olabilir.
+
+Diyelim ki telefon rehberimizde John Harvard isimli bir kişiyi bulmak 
+istiyoruz. Bunun için kişiler uygulamasını açıp arama bölümüne John'un 
+adını veya soyadını yazmaya başlarız.
+
+Uygulama da biz yazdıkça kişi listesini filtrelemeye başlar. Böylece 
+yüzlerce, hatta binlerce kişi arasından aradığımız kişiyi çok kısa bir 
+sürede bulabiliriz. Ancak burada bilgisayarın çözmesi gereken bir problem 
+bulunuyor. Çok sayıda veri arasından aradığımız bilgiyi nasıl bulabiliriz?
+
+Aslında bunu yapmanın birden fazla yöntemi vardır. Bu yöntemlerin nasıl 
+farklılaştığını anlamak için telefonlarımızın olmadığı dönemlere gidelim.
+
+# TELEFON REHBERİ PROBLEMİ (THE PHONE BOOK PROBLEM)
+
+Elimizde alfabetik olarak sıralanmış, toplam 1.000 sayfalık bir telefon 
+rehberi olduğunu varsayalım. Amacımız bu rehberde John Harvard isimli kişiyi bulmak.
+
+Peki, bunu nasıl yapabiliriz?
+
+Aslında aynı problemi çözmek için birbirinden farklı algoritmalar geliştirebiliriz.
+Bu algoritmaların bazıları oldukça basit olabilir. Bazıları daha hızlı çalışabilir. 
+Bazıları ise diğerlerine göre çok daha verimli olabilir.
+
+# BİRİNCİ YAKLAŞIM — HER SEFERİNDE BİR SAYFA (n)
+
+Aklımıza gelebilecek ilk yöntem oldukça basit. Telefon rehberinin ilk sayfasını 
+açarız ve aradığımız kişinin orada olup olmadığını kontrol ederiz.
+
+Eğer John Harvard'ı bulamazsak bir sonraki sayfaya geçeriz. Bu işlemi aradığımız 
+kişiyi bulana veya rehberin sonuna ulaşana kadar tekrar ederiz.
+
+1. Telefon rehberinin ilk sayfasından başla.
+2. Bulunduğun sayfayı kontrol et.
+3. John Harvard'ı bulduysan aramayı bitir.
+4. Bulamadıysan bir sonraki sayfaya geç.
+5. Aradığın kişiyi bulana veya rehberin sonuna ulaşana kadar bu işlemi tekrarla.
+
+Bu algoritma elbette problemi çözebilir. Ancak çok yavaş olabilir.
+
+Örneğin John Harvard'ın isminin 1.000 sayfalık rehberin sonlarına 
+doğru bulunduğunu düşünelim. Bu durumda aradığımız kişiyi bulmak 
+için neredeyse 1.000 sayfayı tek tek kontrol etmemiz gerekebilir.
+
+Yani algoritmamız doğru çalışsa bile oldukça fazla işlem yapmamız 
+gerekebilir. Bu yaklaşımda kontrol etmemiz gereken sayfa sayısı, 
+toplam sayfa sayısıyla birlikte artar. 
+
+Bu ilişkiyi basitçe n ile ifade edebiliriz. Buradaki `n`, problemimizin 
+büyüklüğünü, yani örneğimizde telefon rehberindeki toplam sayfa sayısını 
+temsil eder.
+
+# İKİNCİ YAKLAŞIM — HER SEFERİNDE İKİ SAYFA (n/2)
+
+Peki, ilk algoritmamızı biraz daha hızlı hâle getirebilir miyiz?
+
+Örneğin her adımda bir sayfa yerine iki sayfayı birlikte kontrol ettiğimizi düşünelim.
+Böylece aynı anda daha fazla sayfayı inceleyerek toplam adım sayısını azaltabiliriz.
+
+1.000 sayfalık bir telefon rehberinde:
+
+- İlk yaklaşımda yaklaşık 1.000 adım,
+- İkinci yaklaşımda ise yaklaşık 500 adım yeterli olabilir.
+
+Bu gerçekten bir gelişme. Çünkü gerçekleştirdiğimiz adım sayısını 
+neredeyse yarıya indirdik. Ancak burada kendimize sormamız gereken 
+daha önemli bir soru var: 
+
+Problemimizin boyutu büyüdüğünde algoritmamız nasıl davranacak?
+
+Örneğin telefon rehberindeki sayfa sayısının 1.000'den 2.000'e çıktığını düşünelim.
+
+- 1.000 sayfalık rehberde yaklaşık 500 adım,
+- 2.000 sayfalık rehberde yaklaşık 1.000 adım gerçekleştirmemiz gerekebilir.
+
+Dikkat ederseniz problemimizin büyüklüğü iki katına çıktığında yapmamız 
+gereken iş miktarı da yaklaşık iki katına çıkıyor. Yani ikinci yaklaşım, 
+ilkine göre daha hızlı olsa da problem büyüdükçe iş miktarı benzer şekilde 
+artmaya devam ediyor. Bu ilişkiyi n/2 ile ifade edebiliriz.
+
+# ÜÇÜNCÜ YAKLAŞIM — PROBLEMİ İKİYE BÖLMEK (BINARY SEARCH — log₂n)
+
+Hatırlarsanız telefon rehberimiz alfabetik sıraya göre düzenlenmişti. 
+İşte bu bilgiyi kullanarak arama işlemini çok daha verimli hâle getirebiliriz.
+Bu yaklaşımın adı Binary Search (İkili Arama) olarak bilinir.
+
+Telefon rehberini ilk sayfasından açmak yerine doğrudan ortasından 
+açtığımızı düşünelim. Elimizde 1.000 sayfalık bir telefon rehberi vardı.
+
+Rehberi ortasından açtığımızda yaklaşık 500. sayfaya ulaşırız.
+Diyelim ki açtığımız sayfadaki isimler M harfiyle başlıyor.
+
+Biz ise Harvard soyadını arıyoruz. Peki, alfabetik sıraya 
+göre H harfi M harfinden önce mi gelir, sonra mı?
+
+Elbette önce gelir.
+
+O hâlde John Harvard'ın rehberin ikinci yarısında bulunmasına gerek yok.
+Çünkü rehberimiz alfabetik olarak sıralanmış durumda.
+Bu bilgiyi kullanarak rehberin ikinci yarısını tamamen eleyebiliriz.
+
+Gördüğünüz gibi, yalnızca bir karşılaştırma yaparak yaklaşık 500 sayfayı 
+tek tek incelemek zorunda kalmadan eledik. Böylece problemimizin büyüklüğü:
+
+1.000 sayfadan 500 sayfaya düştü.
+
+Artık aradığımız kişiyi bulmak için telefon rehberinin tamamını değil, 
+yalnızca geriye kalan yarısını incelememiz gerekiyor.
