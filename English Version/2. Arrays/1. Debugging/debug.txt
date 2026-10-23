@@ -1,0 +1,193 @@
+========================================
+Lecture 1 — Debugging
+Repository: my-cs50-study-notes
+Directory: 2. Arrays
+========================================
+
+Until now, we have learned how to write programs
+using variables, conditions, loops, and functions.
+
+However, writing code is only one part of programming.
+Sometimes our programs do not work as expected.
+
+- The program does not compile.
+- The program displays the wrong result.
+- The program suddenly crashes.
+- A loop executes too many times.
+- A function returns an incorrect value.
+- A condition does not behave as expected.
+
+These problems are commonly called bugs.
+That's exactly why we need debugging.
+
+========================================
+# WHAT IS DEBUGGING?
+========================================
+
+Debugging is the process of finding, understanding, 
+and fixing errors in a program.
+
+- Where is the problem?
+- Why is the problem happening?
+- Which part of the code is responsible?
+- What values do our variables contain?
+- Which instructions are actually executed?
+- How can we fix the problem?
+
+Debugging is one of the most important skills a programmer 
+can develop. Even experienced programmers make mistakes.
+
+========================================
+# TYPES OF ERRORS
+========================================
+
+There are several types of errors that programmers commonly encounter.
+
+1. Syntax and compilation errors
+2. Runtime errors
+3. Logical errors
+
+Let's understand each one.
+
+========================================
+# 1. SYNTAX AND COMPILATION ERRORS
+========================================
+
+A syntax error happens when we write code
+that does not follow the language's grammar.
+
+int main(void) {
+     printf("Hello, world!")
+}
+
+Problem 1: We forgot to include stdio.h.
+Problem 2: We forgot the semicolon after printf().
+Problem 3: We also added \n to print a new line.
+
+IMPORTANT: Forgetting \n is not a syntax error.
+
+The program can work without \n, but the output might look less organized.
+
+The compiler can also report other errors, such as undeclared variables 
+or incorrect types. These are compilation errors, even when the syntax 
+itself is otherwise valid.
+
+========================================
+# 2. RUNTIME ERRORS
+========================================
+
+A runtime error happens while the program is executing.
+Sometimes a program compiles successfully, but something 
+goes wrong when we run it. 
+
+- Division by zero.
+- Accessing invalid memory.
+- Invalid pointer operations.
+- Unexpected program termination.
+- Stack overflow.
+
+int a = 10;
+int b = 0;
+
+int result = a / b;
+
+Dividing an integer by zero is undefined behavior in C.
+
+It may cause the program to crash.
+
+========================================
+# 3. LOGICAL ERRORS
+========================================
+
+A logical error happens when the program runs,
+but produces an incorrect result. These errors 
+can be difficult to find because the compiler 
+may not report anything.
+
+int age = 20;
+
+if (age < 18)
+{
+    printf("Adult\n");
+} else {
+    printf("Minor\n");
+}
+
+The program compiles successfully. However, its logic is incorrect.
+
+A person aged 20 should not be classified as a minor.
+
+Logical errors happen because the instructions
+do not match what we intended the program to do.
+
+========================================
+# WHAT IS A DEBUGGER?
+========================================
+
+printf is useful, but sometimes we need
+more control over how our program executes.
+
+A debugger is a tool that allows us
+to inspect a running program.
+
+Instead of running the entire program
+from beginning to end, we can pause it.
+
+While the program is paused, we can:
+
+- Inspect variable values.
+- Execute instructions step by step.
+- Follow the execution flow.
+- Enter functions.
+- See which functions were called.
+- Identify where unexpected behavior begins.
+
+This makes debugging more systematic.
+
+========================================
+# WHAT IS A BREAKPOINT?
+========================================
+
+A breakpoint is a place in our code
+where we tell the debugger to pause execution.
+
+int age = get_int("Age: ");
+
+if (age >= 18)
+{
+    printf("Adult\n");
+}
+
+We suspect something is wrong with the condition.
+
+Instead of executing the entire program,
+we can place a breakpoint on the if statement.
+
+When the program reaches that line, the debugger pauses.
+
+IMPORTANT:
+
+A breakpoint does not change the logic of our program.
+It only tells the debugger where to pause.
+
+========================================
+# HOW TO SET A BREAKPOINT
+========================================
+
+In VS Code, we can usually set a breakpoint
+by clicking to the left of a line number.
+
+A red dot appears next to the line.
+That red dot represents the breakpoint.
+
+Line 10: int age = get_int("Age: ");
+Line 11: if (age >= 18)  <- Breakpoint
+Line 12: {
+Line 13:     printf("Adult\n");
+Line 14: }
+
+When the debugger reaches line 11,
+execution pauses before that line executes.
+
+We can then inspect the variable age.
+Clicking the breakpoint again usually removes it.
