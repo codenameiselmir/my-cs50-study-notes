@@ -1,0 +1,158 @@
+========================================
+Lecture 2 — Compiling
+Repository: my-cs50-study-notes
+Directory: 2. Arrays
+========================================
+
+Until now, we have learned how to write programs
+using the C programming language.
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello, world!\n");
+}
+
+This code is understandable to programmers. However, 
+computers do not directly execute C source code. 
+
+Computers execute instructions represented in machine code.
+
+So, how does our C program become something that a computer can execute?
+
+That's exactly why we need compiling.
+
+========================================
+# WHAT IS COMPILING?
+========================================
+
+Compiling is the process of translating source code into 
+a lower-level representation, eventually allowing us to 
+create an executable program.
+
+A compiler helps translate our source code
+into instructions that a computer can execute.
+
+IMPORTANT:
+
+Compiling and running are not the same thing.
+Compiling creates an executable program.
+Running starts that executable program.
+
+========================================
+# SOURCE CODE VS MACHINE CODE
+========================================
+
+Source code is written by programmers. It contains 
+instructions that humans can read and understand.
+
+Machine code is a lower-level representation of instructions 
+for a particular processor. Unlike C source code, machine code 
+is not designed to be easily read by humans. It is designed to 
+be executed by computers.
+
+========================================
+# WHAT IS A COMPILER?
+========================================
+
+A compiler is a program that translates
+code written in a programming language
+into another representation.
+
+For C, the compilation toolchain eventually
+produces machine code.
+
+- Clang
+- GCC
+- Microsoft Visual C Compiler
+
+========================================
+# WHAT IS GCC?
+========================================
+
+GCC is a collection of compilers that support
+several programming languages.
+
+- C
+- C++
+- Fortran
+- Other supported languages
+
+When programming in C, we commonly use
+the gcc command to compile our source code.
+
+========================================
+# COMPILING WITH GCC
+========================================
+
+Imagine we have a file named: hello.c
+We can compile it using: gcc hello.c
+
+The lowercase -o option specifies the output filename.
+
+gcc hello.c -o hello
+
+- gcc     -> GCC compiler driver.
+- hello.c -> Source code file.
+- -o      -> Output filename option.
+- hello   -> Executable filename.
+
+Now we can run: .\Hello
+
+========================================
+# LINKING
+========================================
+
+Linking is the final main stage of creating an executable program.
+
+During linking, compiled object files are combined and references 
+to required functions and data are resolved.
+
+Imagine our program uses printf().
+
+This gives the compiler the declaration of printf().
+However, the actual implementation is provided by 
+the C standard library. The linker connects our ,
+program with the required library implementation.
+
+GCC normally arranges for the standard C library to be 
+linked automatically in a typical hosted environment.
+
+Other libraries may need to be specified manually.
+
+Command: gcc hello.c -o hello -lcs50
+
+- hello.o -> Object File.
+- -o      -> Output Filename.
+- hello   -> Executable Program.
+- -lcs50  -> Tells the linker to search for the CS50 library.
+
+Command: gcc hello.c cs50.c -o hello
+
+- hello.o -> Object File.
+- cs50.c  -> CS50 Library File.
+- -o      -> Output Filename.
+- hello   -> Executable Program.
+
+========================================
+# GCC COMPILER FLAGS
+========================================
+
+GCC supports many compiler options.
+These options are called flags.
+
+-E      -> Stop after preprocessing.
+-S      -> Stop after generating assembly code.
+-c      -> Compile to an object file without linking.
+-o      -> Specify the output filename.
+-l      -> Link a library.
+-I      -> Add a header search directory.
+-L      -> Add a library search directory.
+-Wall   -> Enable a useful set of compiler warnings.
+-Wextra -> Enable additional warnings.
+-Werror -> Treat warnings as errors.
+-g      -> Generate debugging information.
+-O0     -> Disable most optimizations.
+-O2     -> Enable common compiler optimizations.
+-v      -> Display detailed GCC information.
